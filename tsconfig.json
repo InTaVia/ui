@@ -1,0 +1,15 @@
+{
+	"extends": "@stefanprobst/tsconfig",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"declaration": true,
+		"exactOptionalPropertyTypes": false,
+		"noEmit": false,
+		"outDir": "dist",
+		"paths": {
+			"@/*": ["./src/*"],
+			"~/*": ["./*"]
+		}
+	},
+	"include": ["./**/*.ts", "./**/*.tsx", "./*.config.cjs"]
+}

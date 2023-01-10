@@ -18,7 +18,7 @@ import { Label } from '@/label'
 import { useMergedRef } from '@/lib/use-merged-ref'
 
 const styles = {
-	base: 'text-white border-2 rounded w-5 h-5 flex flex-shrink-0 justify-center items-center transition bg-white border-neutral-500 [data-selected]:bg-accent-500 [data-selected]:border-accent-500 [data-focus-visible]:border-accent-500 [data-disabled]:border-neutral-300',
+	base: 'text-white border-2 rounded w-5 h-5 flex flex-shrink-0 justify-center items-center transition bg-white border-neutral-500 data-selected:bg-accent-500 data-selected:border-accent-500 data-focus-visible:border-accent-500 data-disabled:border-neutral-300',
 }
 
 export interface CheckBoxStyleProps {}

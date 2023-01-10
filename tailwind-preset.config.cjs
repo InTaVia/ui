@@ -26,6 +26,13 @@ const config = {
 				negative: colors.red,
 				positive: colors.green,
 			},
+			data: {
+				disabled: 'disabled',
+				hovered: 'hovered',
+				'focus-visible': 'focus-visible',
+				pressed: 'pressed',
+				selected: 'selected',
+			},
 			fontFamily: {
 				sans: ['Noto Sans DisplayVariable', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 			},

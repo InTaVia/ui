@@ -1,8 +1,7 @@
+import type { AriaLabelingProps, DOMProps } from '@react-types/shared'
 import { isNonEmptyString } from '@stefanprobst/is-nonempty-string'
 import { type ForwardedRef, forwardRef } from 'react'
 import { useProgressBar } from 'react-aria'
-
-import { type AriaLabelingProps, type DomProps } from '@/types'
 
 const defaultLabel = 'Loading...'
 
@@ -17,16 +16,17 @@ export interface SpinnerStyleProps {
 	size?: keyof typeof sizes
 }
 
-export interface SpinnerProps extends SpinnerStyleProps, AriaLabelingProps, DomProps {}
+export interface SpinnerProps extends AriaLabelingProps, DOMProps, SpinnerStyleProps {}
 
 export const Spinner = forwardRef(function Spinner(
 	props: SpinnerProps,
 	forwardedRef: ForwardedRef<SVGSVGElement>,
 ): JSX.Element {
-	const { 'aria-label': ariaLabel, size = 'medium', ...rest } = props
+	const { 'aria-label': ariaLabel, size = 'medium' } = props
 
+	const progressBarRef = forwardedRef
 	const { progressBarProps } = useProgressBar({
-		...rest,
+		...props,
 		isIndeterminate: true,
 		'aria-label':
 			isNonEmptyString(ariaLabel) && isNonEmptyString(props['aria-labelledby'])
@@ -43,9 +43,8 @@ export const Spinner = forwardRef(function Spinner(
 
 	return (
 		<svg
-			ref={forwardedRef}
+			ref={progressBarRef}
 			{...progressBarProps}
-			data-part="spinner"
 			fill="none"
 			height={diameter}
 			strokeWidth={strokeWidth}

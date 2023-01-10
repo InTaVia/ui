@@ -1,7 +1,6 @@
+import type { AriaLabelingProps, DOMProps } from '@react-types/shared'
 import { isNonEmptyString } from '@stefanprobst/is-nonempty-string'
 import { type ForwardedRef, forwardRef } from 'react'
-
-import { type AriaLabelingProps, type DomProps } from '@/types'
 
 export interface IconStyleProps {
 	/**
@@ -17,7 +16,7 @@ export interface IconStyleProps {
 	title?: string
 }
 
-export interface IconProps extends IconStyleProps, AriaLabelingProps, DomProps {
+export interface IconProps extends AriaLabelingProps, DOMProps, IconStyleProps {
 	'aria-hidden'?: boolean
 }
 
@@ -25,18 +24,19 @@ export const Icon = forwardRef(function Icon(
 	props: IconProps,
 	forwardedRef: ForwardedRef<SVGSVGElement>,
 ): JSX.Element {
-	const { 'aria-hidden': ariaHidden, href, title, ...rest } = props
+	const { 'aria-hidden': ariaHidden, href, title, ...iconProps } = props
+
+	const iconRef = forwardedRef
 
 	return (
 		<svg
-			ref={forwardedRef}
-			{...rest}
+			ref={iconRef}
+			{...iconProps}
 			aria-hidden={
 				isNonEmptyString(props['aria-label']) || isNonEmptyString(props['aria-labelledby'])
 					? ariaHidden === true || undefined
 					: true
 			}
-			data-part="icon"
 		>
 			{isNonEmptyString(title) ? <title>{title}</title> : null}
 			<use href={href} />

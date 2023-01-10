@@ -1,11 +1,17 @@
-import { type ReactNode } from 'react'
+import { type HTMLAttributes, type ReactNode } from 'react'
 
-export interface TextProps {
+export interface TextStyleProps {}
+
+export interface TextProps extends HTMLAttributes<HTMLSpanElement>, TextStyleProps {
 	children: ReactNode
 }
 
 export function Text(props: TextProps): JSX.Element {
-	const { children } = props
+	const { children, ...textProps } = props
 
-	return <span data-part="text">{children}</span>
+	return (
+		<span {...textProps} className="">
+			{children}
+		</span>
+	)
 }

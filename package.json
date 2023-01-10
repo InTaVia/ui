@@ -25,7 +25,7 @@
 		"node": ">=18",
 		"pnpm": ">=7"
 	},
-	"packageManager": "pnpm@7.18.1",
+	"packageManager": "pnpm@7.22.0",
 	"sideEffects": false,
 	"scripts": {
 		"build": "rm -rf dist && microbundle --format cjs,modern && cp ./tailwind-preset.config.cjs ./dist/",
@@ -50,6 +50,8 @@
 		"validate": "run-p format:check lint:check types:check test"
 	},
 	"dependencies": {
+		"@react-aria/utils": "^3.14.2",
+		"@react-types/shared": "^3.16.0",
 		"@stefanprobst/is-nonempty-string": "^1.0.1",
 		"clsx": "^1.2.1",
 		"react-aria": "^3.22.0",
@@ -69,7 +71,6 @@
 		"@stefanprobst/eslint-config": "^1.0.10",
 		"@stefanprobst/eslint-config-react": "^1.0.4",
 		"@stefanprobst/eslint-config-storybook": "^1.0.1",
-		"@stefanprobst/next-i18n": "^1.2.0",
 		"@stefanprobst/prettier-config": "^2.0.3",
 		"@stefanprobst/stylelint-config": "^2.5.1",
 		"@stefanprobst/tsconfig": "^2.2.2",
@@ -123,6 +124,9 @@
 			"@stefanprobst/eslint-config-react",
 			"@stefanprobst/eslint-config-storybook"
 		],
+		"rules": {
+			"@typescript-eslint/no-empty-interface": "off"
+		},
 		"overrides": [
 			{
 				"files": [

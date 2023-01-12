@@ -12,23 +12,59 @@ import { mergeProps, useButton, useFocusRing, useHover } from 'react-aria'
 import { useMergedRef } from '@/lib/use-merged-ref'
 
 const styles = {
-	base: 'inline-grid font-sans grid-flow-col min-w-[64px] cursor-default select-none items-center justify-center rounded-sm text-center font-medium transition data-focus-visible:outline-none data-focus-visible:ring data-focus-visible:ring-offset-2',
+	base: cx(
+		'inline-grid',
+		'font-sans',
+		'grid-flow-col',
+		'min-w-[64px]',
+		'cursor-default',
+		'select-none',
+		'items-center',
+		'justify-center',
+		'rounded-sm',
+		'text-center',
+		'font-medium',
+		'transition',
+		'data-focus-visible:outline-none',
+		'data-focus-visible:ring',
+		'data-focus-visible:ring-offset-2',
+	),
 	sizes: {
-		small: 'px-3 py-1.5 gap-1 text-sm',
-		medium: 'px-4 py-1.5 gap-1.5 text-base',
-		large: 'px-6 py-2 gap-2 text-base',
+		small: cx('px-3', 'py-1.5', 'gap-1', 'text-sm'),
+		medium: cx('px-4', 'py-1.5', 'gap-1.5', 'text-base'),
+		large: cx('px-6', 'py-2', 'gap-2', 'text-base'),
 	},
 	variants: {
-		primary:
-			'bg-brand-800 text-neutral-0 data-hovered:bg-brand-700 data-focus-visible:bg-brand-700 data-focus-visible:ring-brand-700',
-		secondary: '',
-		accent:
-			'bg-accent-800 text-neutral-0 data-hovered:bg-accent-700 data-focus-visible:bg-accent-700 data-focus-visible:ring-accent-700',
-		link: '',
-		positive:
-			'bg-positive-800 text-neutral-0 data-hovered:bg-positive-700 data-focus-visible:bg-positive-700 data-focus-visible:ring-positive-700',
-		negative:
-			'bg-negative-800 text-neutral-0 data-hovered:bg-negative-700 data-focus-visible:bg-negative-700 data-focus-visible:ring-negative-700',
+		primary: cx(
+			'bg-brand-800',
+			'text-neutral-0',
+			'data-hovered:bg-brand-700',
+			'data-focus-visible:bg-brand-700',
+			'data-focus-visible:ring-brand-700',
+		),
+		secondary: cx(''),
+		accent: cx(
+			'bg-accent-800',
+			'text-neutral-0',
+			'data-hovered:bg-accent-700',
+			'data-focus-visible:bg-accent-700',
+			'data-focus-visible:ring-accent-700',
+		),
+		text: cx(''),
+		positive: cx(
+			'bg-positive-800',
+			'text-neutral-0',
+			'data-hovered:bg-positive-700',
+			'data-focus-visible:bg-positive-700',
+			'data-focus-visible:ring-positive-700',
+		),
+		negative: cx(
+			'bg-negative-800',
+			'text-neutral-0',
+			'data-hovered:bg-negative-700',
+			'data-focus-visible:bg-negative-700',
+			'data-focus-visible:ring-negative-700',
+		),
 	},
 }
 

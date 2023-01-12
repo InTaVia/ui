@@ -3,4 +3,5 @@ body,
 #storybook-docs,
 #storybook-root {
 	block-size: 100%;
+	font-family: 'Noto Sans DisplayVariable', ui-sans-serif, system-ui, sans-serif;
 }

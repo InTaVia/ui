@@ -1,3 +1,4 @@
+import cx from 'clsx'
 import { type ForwardedRef, type HTMLAttributes, forwardRef } from 'react'
 
 export interface TextAreaStyleProps {}
@@ -12,5 +13,5 @@ export const TextArea = forwardRef(function TextArea(
 
 	const inputRef = forwardedRef
 
-	return <textarea ref={inputRef} {...inputProps} className="" />
+	return <textarea ref={inputRef} {...inputProps} className={cx()} />
 })

@@ -1,3 +1,4 @@
+import cx from 'clsx'
 import { type HTMLAttributes, type ReactNode } from 'react'
 
 export interface TextStyleProps {}
@@ -10,7 +11,7 @@ export function Text(props: TextProps): JSX.Element {
 	const { children, ...textProps } = props
 
 	return (
-		<span {...textProps} className="">
+		<span {...textProps} className={cx()}>
 			{children}
 		</span>
 	)

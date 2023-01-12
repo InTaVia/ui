@@ -2,6 +2,7 @@ import cx from 'clsx'
 import { type ForwardedRef, forwardRef, useRef } from 'react'
 import {
 	type AriaCheckboxProps,
+	type AriaFieldProps,
 	mergeProps,
 	useCheckbox,
 	useField,
@@ -14,16 +15,33 @@ import { useToggleState } from 'react-stately'
 import { Description } from '@/description'
 import { ErrorMessage } from '@/error-message'
 import { Field } from '@/field'
-import { Label } from '@/label'
+// import { Label } from '@/label'
 import { useMergedRef } from '@/lib/use-merged-ref'
 
 const styles = {
-	base: 'text-white border-2 rounded w-5 h-5 flex flex-shrink-0 justify-center items-center transition bg-white border-neutral-500 data-selected:bg-accent-500 data-selected:border-accent-500 data-focus-visible:border-accent-500 data-disabled:border-neutral-300',
+	base: cx(
+		'text-white',
+		'border-2',
+		'rounded',
+		'w-4',
+		'h-4',
+		'flex',
+		'flex-shrink-0',
+		'justify-center',
+		'items-center',
+		'transition',
+		'bg-white',
+		'border-neutral-500',
+		'data-selected:bg-accent-500',
+		'data-selected:border-accent-500',
+		'data-focus-visible:border-accent-500',
+		'data-disabled:border-neutral-300',
+	),
 }
 
 export interface CheckBoxStyleProps {}
 
-export interface CheckBoxProps extends AriaCheckboxProps, CheckBoxStyleProps {
+export interface CheckBoxProps extends AriaCheckboxProps, AriaFieldProps, CheckBoxStyleProps {
 	inputRef?: ForwardedRef<HTMLInputElement>
 }
 
@@ -46,7 +64,7 @@ export const CheckBox = forwardRef(function CheckBox(
 
 	return (
 		<Field ref={fieldRef}>
-			<label className="flex items-center gap-2">
+			<label className={cx('inline-flex', 'items-center', 'gap-2')}>
 				<VisuallyHidden>
 					<input ref={checkBoxRef} {...mergeProps(inputProps, focusProps, hoverProps)} />
 				</VisuallyHidden>
@@ -56,9 +74,10 @@ export const CheckBox = forwardRef(function CheckBox(
 					data-disabled={isDisabled || undefined}
 					data-focus-visible={isFocusVisible || undefined}
 					data-hovered={isHovered || undefined}
+					data-selected={isSelected || undefined}
 					data-validation-state={validationState}
 				>
-					<svg className="stroke-current w-3 h-3" viewBox="0 0 18 18">
+					<svg className={cx('stroke-current', 'w-2.5', 'h-2.5')} viewBox="0 0 18 18">
 						<polyline
 							points="1 9 7 14 15 4"
 							fill="none"
@@ -69,16 +88,17 @@ export const CheckBox = forwardRef(function CheckBox(
 						/>
 					</svg>
 				</div>
-				<Label data-disabled={isDisabled || undefined}>{label}</Label>
+				{/* <Label data-disabled={isDisabled || undefined} elementType="span">
+					{label}
+				</Label> */}
+				<span>{label}</span>
 			</label>
 			{validationState !== 'invalid' && description != null ? (
-				<Description {...descriptionProps}>{errorMessage}</Description>
+				<Description {...descriptionProps}>{description}</Description>
 			) : null}
 			{validationState === 'invalid' && errorMessage != null ? (
-				<ErrorMessage {...errorMessageProps}>{description}</ErrorMessage>
+				<ErrorMessage {...errorMessageProps}>{errorMessage}</ErrorMessage>
 			) : null}
 		</Field>
 	)
 })
-
-// labelProps

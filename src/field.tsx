@@ -1,3 +1,4 @@
+import cx from 'clsx'
 import { type ForwardedRef, type HTMLAttributes, type ReactNode, forwardRef } from 'react'
 
 export interface FieldStyleProps {}
@@ -15,7 +16,7 @@ export const Field = forwardRef(function Field(
 	const fieldRef = forwardedRef
 
 	return (
-		<div ref={fieldRef} {...fieldProps} className="grid gap-1">
+		<div ref={fieldRef} {...fieldProps} className={cx('inline-grid', 'gap-1')}>
 			{children}
 		</div>
 	)

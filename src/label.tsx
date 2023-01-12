@@ -1,3 +1,4 @@
+import cx from 'clsx'
 import { type ForwardedRef, type LabelHTMLAttributes, type ReactNode, forwardRef } from 'react'
 
 export interface LabelStyleProps {}
@@ -20,7 +21,7 @@ export const Label = forwardRef(function Label(
 		<ElementType
 			ref={labelRef}
 			{...labelProps}
-			className="text-sm select-none text-neutral-700 data-disabled:text-neutral-400"
+			className={cx('text-sm', 'select-none', 'text-neutral-700', 'data-disabled:text-neutral-400')}
 		>
 			{children}
 		</ElementType>

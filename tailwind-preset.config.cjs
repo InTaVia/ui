@@ -23,15 +23,18 @@ const config = {
 			colors: {
 				neutral: { 0: colors.white, ...colors.neutral, 1000: colors.black },
 				brand: colors.neutral,
+				accent: colors.neutral,
 				negative: colors.red,
 				positive: colors.green,
 			},
 			data: {
 				disabled: 'disabled',
-				hovered: 'hovered',
 				'focus-visible': 'focus-visible',
+				hovered: 'hovered',
+				invalid: 'validation-state="invalid"',
 				pressed: 'pressed',
 				selected: 'selected',
+				valid: 'validation-state="valid"',
 			},
 			fontFamily: {
 				sans: ['Noto Sans DisplayVariable', 'ui-sans-serif', 'system-ui', 'sans-serif'],

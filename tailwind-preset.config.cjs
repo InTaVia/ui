@@ -1,7 +1,11 @@
 /** @typedef {import('tailwindcss').Config} TailwindConfig */
 
-const colors = require('tailwindcss/colors')
-const fontSizes = require('tailwindcss/defaultTheme').fontSize
+// @ts-expect-error Missing module declaration.
+const animatePlugin = require("tailwindcss-animate");
+const colors = require("tailwindcss/colors");
+
+const neutral = { 0: colors.white, ...colors.slate, 1000: colors.black };
+const negative = colors.red;
 
 /** @type {TailwindConfig} */
 const config = {
@@ -14,39 +18,35 @@ const config = {
 		ringOpacity: false,
 		textOpacity: false,
 	},
-	plugins: [],
+	darkMode: ["class", '[data-color-scheme="dark"]'],
+	plugins: [animatePlugin],
 	theme: {
 		extend: {
-			borderRadius: {
-				sm: '3px',
-			},
 			colors: {
-				neutral: { 0: colors.white, ...colors.neutral, 1000: colors.black },
-				brand: colors.neutral,
-				negative: colors.red,
-				positive: colors.green,
+				neutral,
+				negative,
 			},
 			fontFamily: {
-				sans: ['Noto Sans DisplayVariable', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				sans: ["InterVariable", "ui-sans-serif", "system-ui", "sans-serif"],
 			},
-			fontSize: {
-				xs: ['0.625rem', { lineHeight: '0.875rem' }],
-				sm: fontSizes.xs,
-				base: fontSizes.sm,
-				lg: fontSizes.base,
-				xl: fontSizes.lg,
-				'2xl': fontSizes.xl,
-				'3xl': fontSizes['2xl'],
-				'4xl': fontSizes['3xl'],
-				'5xl': fontSizes['4xl'],
-				'6xl': fontSizes['5xl'],
-				'7xl': fontSizes['6xl'],
-				'8xl': fontSizes['7xl'],
-				'9xl': fontSizes['8xl'],
-				'10xl': fontSizes['9xl'],
+			keyframes: {
+				"accordion-down": {
+					// @ts-expect-error Number should be allowed.
+					from: { height: 0 },
+					to: { height: "var(--radix-accordion-content-height)" },
+				},
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					// @ts-expect-error Number should be allowed.
+					to: { height: 0 },
+				},
+			},
+			animation: {
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
 			},
 		},
 	},
-}
+};
 
-module.exports = config
+module.exports = config;

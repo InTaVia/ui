@@ -4,3 +4,14 @@ body,
 #storybook-root {
 	block-size: 100%;
 }
+
+:root {
+	background-color: theme(colors.neutral.0);
+	color: theme(colors.neutral.900);
+	font-family: theme(fontFamily.sans);
+}
+
+:root[data-color-scheme="dark"] {
+	background-color: theme(colors.neutral.900);
+	color: theme(colors.neutral.50);
+}

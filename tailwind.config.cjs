@@ -2,12 +2,17 @@
 
 /** @type {TailwindConfig} */
 const config = {
-	content: ['./src/**/*.@(css|ts|tsx)'],
+	content: ["./src/**/*.@(css|ts|tsx)"],
+	darkMode: ["class", '[data-color-scheme="dark"]'],
 	plugins: [],
-	presets: [require('./tailwind-preset.config.cjs')],
+	presets: [require("./tailwind-preset.config.cjs")],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ["InterVariable", "ui-sans-serif", "system-ui", "sans-serif"],
+			},
+		},
 	},
-}
+};
 
-module.exports = config
+module.exports = config;

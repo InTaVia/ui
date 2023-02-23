@@ -8,8 +8,8 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.modern.js",
-			"default": "./dist/index.modern.js"
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
 		},
 		"./tailwind-preset": {
 			"require": "./dist/tailwind-preset.config.cjs",
@@ -23,17 +23,17 @@
 		"node": "18.x",
 		"pnpm": "7.x"
 	},
-	"packageManager": "pnpm@7.27.0",
+	"packageManager": "pnpm@7.27.1",
 	"sideEffects": false,
 	"scripts": {
-		"build": "rm -rf dist && microbundle --format cjs,modern ./src/index.ts && cp ./tailwind-preset.config.cjs ./dist/",
+		"build": "tsup ./src/index.tsx --publicDir",
 		"changeset:add": "changeset add",
 		"changeset:status": "changeset status --verbose",
 		"ci:release": "pnpm run build && changeset publish",
 		"format:check": "prettier . --cache --check --ignore-path .gitignore",
 		"format:fix": "pnpm run format:check --write",
-		"lint:check": "run-p 'lint:*:check'",
-		"lint:fix": "run-p 'lint:*:fix'",
+		"lint:check": "pnpm run \"/lint:.*?:check/\"",
+		"lint:fix": "pnpm run \"/lint:.*?:fix/\"",
 		"lint:code:check": "eslint . --cache --ignore-path .gitignore",
 		"lint:code:fix": "pnpm run lint:code:check --fix",
 		"lint:styles:check": "stylelint \"**/*.css\" --allow-empty-input --cache --ignore-path .gitignore",
@@ -49,9 +49,18 @@
 	},
 	"dependencies": {
 		"@radix-ui/react-accordion": "^1.1.0",
+		"@radix-ui/react-alert-dialog": "^1.0.2",
+		"@radix-ui/react-aspect-ratio": "^1.0.1",
+		"@radix-ui/react-avatar": "^1.0.1",
 		"@radix-ui/react-checkbox": "^1.0.1",
+		"@radix-ui/react-collapsible": "^1.0.1",
+		"@radix-ui/react-context-menu": "^2.1.1",
+		"@radix-ui/react-dialog": "^1.0.2",
 		"@radix-ui/react-dropdown-menu": "^2.0.2",
 		"@radix-ui/react-hover-card": "^1.0.3",
+		"@radix-ui/react-label": "^2.0.0",
+		"@radix-ui/react-menubar": "^1.0.0",
+		"@radix-ui/react-navigation-menu": "^1.1.1",
 		"@radix-ui/react-popover": "^1.0.3",
 		"@radix-ui/react-progress": "^1.0.1",
 		"@radix-ui/react-radio-group": "^1.1.1",
@@ -62,57 +71,58 @@
 		"@radix-ui/react-switch": "^1.0.1",
 		"@radix-ui/react-tabs": "^1.0.2",
 		"@radix-ui/react-toast": "^1.1.2",
+		"@radix-ui/react-toggle": "^1.0.1",
 		"@radix-ui/react-tooltip": "^1.0.3",
-		"@stefanprobst/is-nonempty-string": "^1.0.1",
+		"@tailwindcss/line-clamp": "^0.4.2",
 		"class-variance-authority": "^0.4.0",
 		"clsx": "^1.2.1",
-		"lucide-react": "^0.109.0",
-		"tailwind-merge": "^1.9.1",
+		"cmdk": "^0.1.22",
+		"lucide-react": "^0.115.0",
+		"tailwind-merge": "^1.10.0",
+		"tailwindcss": "^3.2.7",
 		"tailwindcss-animate": "^1.0.5"
 	},
 	"peerDependencies": {
-		"react": ">=18",
-		"tailwindcss": ">=3"
+		"react": ">=18"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.8",
 		"@changesets/cli": "^2.26.0",
-		"@commitlint/cli": "^17.4.2",
+		"@commitlint/cli": "^17.4.4",
 		"@fontsource/inter": "^4.5.15",
 		"@stefanprobst/commitlint-config": "^1.0.3",
 		"@stefanprobst/eslint-config": "^1.0.10",
 		"@stefanprobst/eslint-config-react": "^1.0.4",
 		"@stefanprobst/eslint-config-storybook": "^1.0.1",
 		"@stefanprobst/prettier-config": "^3.0.0",
-		"@stefanprobst/stylelint-config": "^2.5.1",
+		"@stefanprobst/stylelint-config": "^3.0.1",
 		"@stefanprobst/tsconfig": "^2.2.2",
-		"@storybook/addon-a11y": "7.0.0-beta.43",
-		"@storybook/addon-essentials": "^7.0.0-beta.43",
-		"@storybook/addon-interactions": "^7.0.0-beta.43",
-		"@storybook/addon-links": "^7.0.0-beta.43",
-		"@storybook/blocks": "^7.0.0-beta.43",
-		"@storybook/react": "^7.0.0-beta.43",
-		"@storybook/react-vite": "^7.0.0-beta.43",
+		"@storybook/addon-a11y": "7.0.0-beta.53",
+		"@storybook/addon-essentials": "^7.0.0-beta.53",
+		"@storybook/addon-interactions": "^7.0.0-beta.53",
+		"@storybook/addon-links": "^7.0.0-beta.53",
+		"@storybook/blocks": "^7.0.0-beta.53",
+		"@storybook/react": "^7.0.0-beta.53",
+		"@storybook/react-vite": "^7.0.0-beta.53",
 		"@storybook/testing-library": "^0.0.13",
-		"@types/react": "^18.0.27",
+		"@types/react": "^18.0.28",
 		"autoprefixer": "^10.4.13",
-		"eslint": "^8.33.0",
-		"eslint-plugin-tailwindcss": "^3.8.3",
-		"lint-staged": "^13.1.0",
-		"microbundle": "^0.15.1",
+		"eslint": "^8.34.0",
+		"eslint-plugin-tailwindcss": "^3.9.0",
+		"lint-staged": "^13.1.2",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.4.21",
-		"postcss-custom-media": "^9.1.1",
-		"postcss-nesting": "^11.1.0",
-		"prettier": "^2.8.3",
+		"postcss-custom-media": "^9.1.2",
+		"postcss-nesting": "^11.2.1",
+		"prettier": "^2.8.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"simple-git-hooks": "^2.8.1",
-		"storybook": "^7.0.0-beta.43",
-		"stylelint": "^14.16.1",
-		"tailwindcss": "^3.2.4",
+		"storybook": "^7.0.0-beta.53",
+		"stylelint": "^15.2.0",
+		"tsup": "^6.6.3",
 		"typescript": "^4.9.5",
-		"vite": "^4.1.1",
+		"vite": "^4.1.4",
 		"vite-tsconfig-paths": "^4.0.5"
 	},
 	"browserslist": {
@@ -154,7 +164,7 @@
 		]
 	},
 	"lint-staged": {
-		"*.@(ts|tsx)": [
+		"*.@(cjs|mjs|ts|tsx)": [
 			"eslint --cache --fix",
 			"prettier --cache --write"
 		],
@@ -162,7 +172,7 @@
 			"stylelint --cache --fix",
 			"prettier --cache --write"
 		],
-		"*.!(css|ts|tsx)": "prettier --cache --ignore-unknown --write"
+		"*.!(cjs|css|mjs|ts|tsx)": "prettier --cache --ignore-unknown --write"
 	},
 	"postcss": {
 		"plugins": {
@@ -180,5 +190,16 @@
 	},
 	"stylelint": {
 		"extends": "@stefanprobst/stylelint-config"
+	},
+	"tsup": {
+		"clean": true,
+		"dts": true,
+		"format": [
+			"cjs",
+			"esm"
+		],
+		"minify": true,
+		"sourcemap": true,
+		"treeshake": true
 	}
 }

@@ -3,15 +3,20 @@ import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "reac
 
 import { cn } from "@/lib/cn";
 
-const ScrollArea = forwardRef<
-	ElementRef<typeof ScrollAreaPrimitive.Root>,
-	ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
->(({ className, children, ...props }, ref) => {
+type ScrollAreaProps = ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>;
+type ScrollAreaElement = ElementRef<typeof ScrollAreaPrimitive.Root>;
+
+export const ScrollArea = forwardRef<ScrollAreaElement, ScrollAreaProps>(function ScrollArea(
+	props,
+	forwardedRef,
+): JSX.Element {
+	const { children, className, ...rest } = props;
+
 	return (
 		<ScrollAreaPrimitive.Root
-			ref={ref}
+			ref={forwardedRef}
 			className={cn("relative overflow-hidden", className)}
-			{...props}
+			{...rest}
 		>
 			<ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
 				{children}
@@ -26,13 +31,18 @@ ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName;
 
 //
 
-const ScrollBar = forwardRef<
-	ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
-	ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>
->(({ className, orientation = "vertical", ...props }, ref) => {
+type ScrollBarProps = ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>;
+type ScrollBarElement = ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>;
+
+export const ScrollBar = forwardRef<ScrollBarElement, ScrollBarProps>(function ScrollBar(
+	props,
+	forwardedRef,
+): JSX.Element {
+	const { className, orientation = "vertical", ...rest } = props;
+
 	return (
 		<ScrollAreaPrimitive.ScrollAreaScrollbar
-			ref={ref}
+			ref={forwardedRef}
 			orientation={orientation}
 			className={cn(
 				"flex touch-none select-none transition-colors",
@@ -40,7 +50,7 @@ const ScrollBar = forwardRef<
 				orientation === "horizontal" && "h-2.5 border-t border-t-transparent p-[1px]",
 				className,
 			)}
-			{...props}
+			{...rest}
 		>
 			<ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-neutral-300 dark:bg-neutral-700" />
 		</ScrollAreaPrimitive.ScrollAreaScrollbar>
@@ -48,7 +58,3 @@ const ScrollBar = forwardRef<
 });
 
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName;
-
-//
-
-export { ScrollArea, ScrollBar };

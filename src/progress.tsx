@@ -3,29 +3,30 @@ import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "reac
 
 import { cn } from "@/lib/cn";
 
-const Progress = forwardRef<
-	ElementRef<typeof ProgressPrimitive.Root>,
-	ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
->(({ className, value, ...props }, ref) => {
+type ProgressProps = ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>;
+type ProgressElement = ElementRef<typeof ProgressPrimitive.Root>;
+
+export const Progress = forwardRef<ProgressElement, ProgressProps>(function Progress(
+	props,
+	forwardedRef,
+): JSX.Element {
+	const { className, value, ...rest } = props;
+
 	return (
 		<ProgressPrimitive.Root
-			ref={ref}
+			ref={forwardedRef}
 			className={cn(
 				"relative h-4 w-full overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800",
 				className,
 			)}
-			{...props}
+			{...rest}
 		>
 			<ProgressPrimitive.Indicator
 				className="h-full w-full flex-1 bg-neutral-900 transition-all dark:bg-neutral-400"
-				style={{ transform: `tranneutralX(-${100 - (value != null ? value : 0)}%)` }}
+				style={{ transform: `translateX(-${100 - (value ?? 0)}%)` }}
 			/>
 		</ProgressPrimitive.Root>
 	);
 });
 
 Progress.displayName = ProgressPrimitive.Root.displayName;
-
-//
-
-export { Progress };

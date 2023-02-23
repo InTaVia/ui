@@ -2,6 +2,7 @@
 
 // @ts-expect-error Missing module declaration.
 const animatePlugin = require("tailwindcss-animate");
+const lineClampPlugin = require("@tailwindcss/line-clamp");
 const colors = require("tailwindcss/colors");
 
 const neutral = { 0: colors.white, ...colors.slate, 1000: colors.black };
@@ -19,7 +20,7 @@ const config = {
 		textOpacity: false,
 	},
 	darkMode: ["class", '[data-color-scheme="dark"]'],
-	plugins: [animatePlugin],
+	plugins: [animatePlugin, lineClampPlugin],
 	theme: {
 		extend: {
 			colors: {
@@ -31,14 +32,12 @@ const config = {
 			},
 			keyframes: {
 				"accordion-down": {
-					// @ts-expect-error Number should be allowed.
-					from: { height: 0 },
+					from: { height: "0" },
 					to: { height: "var(--radix-accordion-content-height)" },
 				},
 				"accordion-up": {
 					from: { height: "var(--radix-accordion-content-height)" },
-					// @ts-expect-error Number should be allowed.
-					to: { height: 0 },
+					to: { height: "0" },
 				},
 			},
 			animation: {

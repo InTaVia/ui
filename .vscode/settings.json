@@ -16,6 +16,12 @@
 		"*.css": "tailwindcss"
 	},
 	"files.eol": "\n",
+	"json.schemas": [
+		{
+			"url": "https://cdn.jsdelivr.net/npm/tsup/schema.json",
+			"fileMatch": ["package.json"]
+		}
+	],
 	"less.validate": false,
 	"scss.validate": false,
 	"stylelint.enable": true,

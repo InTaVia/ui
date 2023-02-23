@@ -3,32 +3,34 @@ import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "reac
 
 import { cn } from "@/lib/cn";
 
-const HoverCard = HoverCardPrimitive.Root;
-
-const HoverCardTrigger = HoverCardPrimitive.Trigger;
+export const HoverCard = HoverCardPrimitive.Root;
 
 //
 
-const HoverCardContent = forwardRef<
-	ElementRef<typeof HoverCardPrimitive.Content>,
-	ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => {
-	return (
-		<HoverCardPrimitive.Content
-			ref={ref}
-			align={align}
-			sideOffset={sideOffset}
-			className={cn(
-				"z-50 w-64 rounded-md border border-neutral-100 bg-neutral-0 p-4 shadow-md outline-none animate-in zoom-in-90 dark:border-neutral-800 dark:bg-neutral-800",
-				className,
-			)}
-			{...props}
-		/>
-	);
-});
+export const HoverCardTrigger = HoverCardPrimitive.Trigger;
+
+//
+
+type HoverCardContentProps = ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>;
+type HoverCardContentElement = ElementRef<typeof HoverCardPrimitive.Content>;
+
+export const HoverCardContent = forwardRef<HoverCardContentElement, HoverCardContentProps>(
+	function HoverCardContent(props, forwardedRef): JSX.Element {
+		const { align, className, sideOffset, ...rest } = props;
+
+		return (
+			<HoverCardPrimitive.Content
+				ref={forwardedRef}
+				align={align}
+				className={cn(
+					"z-50 w-64 rounded-md border border-neutral-100 bg-white p-4 shadow-md outline-none animate-in zoom-in-90 dark:border-neutral-800 dark:bg-neutral-800",
+					className,
+				)}
+				sideOffset={sideOffset}
+				{...rest}
+			/>
+		);
+	},
+);
 
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
-
-//
-
-export { HoverCard, HoverCardContent, HoverCardTrigger };

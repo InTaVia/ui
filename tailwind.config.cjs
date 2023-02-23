@@ -1,11 +1,13 @@
 /** @typedef {import('tailwindcss').Config} TailwindConfig */
 
+const preset = require("./public/tailwind-preset.config.cjs");
+
 /** @type {TailwindConfig} */
 const config = {
 	content: ["./src/**/*.@(css|ts|tsx)"],
 	darkMode: ["class", '[data-color-scheme="dark"]'],
 	plugins: [],
-	presets: [require("./tailwind-preset.config.cjs")],
+	presets: [preset],
 	theme: {
 		extend: {
 			fontFamily: {

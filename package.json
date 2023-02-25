@@ -2,20 +2,8 @@
 	"name": "@intavia/ui",
 	"version": "0.1.2",
 	"license": "MIT",
-	"type": "module",
 	"types": "./dist/index.d.ts",
-	"main": "./dist/index.cjs",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js",
-			"default": "./dist/index.js"
-		},
-		"./tailwind-preset": {
-			"require": "./dist/tailwind-preset.config.cjs",
-			"default": "./dist/tailwind-preset.config.cjs"
-		}
-	},
+	"main": "./dist/index.js",
 	"files": [
 		"dist"
 	],

@@ -1,5 +1,13 @@
 # @intavia/ui
 
+## 0.1.3
+
+### Patch Changes
+
+- [`830652f`](https://github.com/InTaVia/ui/commit/830652f11927b7d122922482a46d708ba148dd65) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - remove esm build, which is broken in radix
+  currently
+
 ## 0.1.2
 
 ### Patch Changes

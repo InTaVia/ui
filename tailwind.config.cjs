@@ -1,6 +1,6 @@
 /** @typedef {import('tailwindcss').Config} TailwindConfig */
 
-const preset = require("./public/tailwind-preset.config.cjs");
+const preset = require("./src/tailwind-preset/tailwind-preset.config.cjs");
 
 /** @type {TailwindConfig} */
 const config = {

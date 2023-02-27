@@ -14,7 +14,7 @@
 	"packageManager": "pnpm@7.27.1",
 	"sideEffects": false,
 	"scripts": {
-		"build": "tsup ./src/index.tsx --publicDir",
+		"build": "tsup ./src/index.tsx && cp ./src/tailwind-preset/* ./dist/",
 		"changeset:add": "changeset add",
 		"changeset:status": "changeset status --verbose",
 		"ci:release": "pnpm run build && changeset publish",

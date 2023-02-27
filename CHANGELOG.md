@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.6
+
+### Patch Changes
+
+- [`9a1ea69`](https://github.com/InTaVia/ui/commit/9a1ea69f3d520a91b7faecfad38e2d37041811e1) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - fix tailwind preset types
+
 ## 0.1.5
 
 ### Patch Changes

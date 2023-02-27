@@ -4,7 +4,7 @@ import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "reac
 
 import { cn } from "@/lib/cn";
 
-export const Select = SelectPrimitive.Trigger;
+export const Select = SelectPrimitive.Root;
 
 //
 

@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.7
+
+### Patch Changes
+
+- [`3325d39`](https://github.com/InTaVia/ui/commit/3325d39ae301244354f78c0619deffa512de85ed) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add toast
+
 ## 0.1.6
 
 ### Patch Changes

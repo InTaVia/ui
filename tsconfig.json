@@ -11,6 +11,6 @@
 			"~/*": ["./*"]
 		}
 	},
-	"include": ["./**/*.ts", "./**/*.tsx", "*.config.cjs"],
+	"include": ["./**/*.ts", "./**/*.tsx", "./**/*.config.cjs"],
 	"exclude": ["dist", "node_modules"]
 }

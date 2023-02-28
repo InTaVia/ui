@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.8
+
+### Patch Changes
+
+- [`0cc0d62`](https://github.com/InTaVia/ui/commit/0cc0d620f5489f2e70cae4b3a47ec3a49aab7ad9) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add missing exports
+
 ## 0.1.7
 
 ### Patch Changes

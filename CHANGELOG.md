@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.11
+
+### Patch Changes
+
+- [`c31536d`](https://github.com/InTaVia/ui/commit/c31536d5fbbe959d055d4481277e0910720c3d61) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add missing export for combobox
+
 ## 0.1.10
 
 ### Patch Changes

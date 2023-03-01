@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.12
+
+### Patch Changes
+
+- [`2e87ccc`](https://github.com/InTaVia/ui/commit/2e87ccc229970717870873029dd7612dd0a342bc) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - fix combobox build
+
 ## 0.1.11
 
 ### Patch Changes

@@ -5,6 +5,7 @@ export * from "@/avatar";
 export * from "@/button";
 export * from "@/checkbox";
 export * from "@/collapsible";
+export * from "@/combobox";
 export * from "@/command";
 export * from "@/context-menu";
 export * from "@/dialog";

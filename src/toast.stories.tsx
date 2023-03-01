@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { Fragment } from "react";
 
 import { Button } from "@/button";
 import { Toast, ToastAction } from "@/toast";
+import { Toaster } from "@/toaster";
 import { useToast } from "@/use-toast";
 
 const meta = {
@@ -16,22 +18,30 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	args: {},
 	render(_args) {
-		// eslint-disable-next-line react-hooks/rules-of-hooks
-		const { toast } = useToast();
-
 		return (
-			<Button
-				variant="outline"
-				onClick={() => {
-					toast({
-						title: "Scheduled: Catch up ",
-						description: "Friday, February 10, 2023 at 5:57 PM",
-						action: <ToastAction altText="Goto schedule to undo">Undo</ToastAction>,
-					});
-				}}
-			>
-				Add to calendar
-			</Button>
+			<Fragment>
+				<Toaster />
+				<ToastStory />
+			</Fragment>
 		);
 	},
 };
+
+function ToastStory(): JSX.Element {
+	const { toast } = useToast();
+
+	return (
+		<Button
+			variant="outline"
+			onClick={() => {
+				toast({
+					title: "Scheduled: Catch up ",
+					description: "Friday, February 10, 2023 at 5:57 PM",
+					action: <ToastAction altText="Goto schedule to undo">Undo</ToastAction>,
+				});
+			}}
+		>
+			Add to calendar
+		</Button>
+	);
+}

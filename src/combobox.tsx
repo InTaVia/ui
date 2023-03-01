@@ -1,4 +1,10 @@
-import { type ComboboxProps, Combobox } from "@headlessui/react";
+import {
+	type ComboboxInputProps,
+	type ComboboxOptionProps,
+	type ComboboxOptionsProps,
+	type ComboboxProps,
+	Combobox,
+} from "@headlessui/react";
 import * as PopperPrimitive from "@radix-ui/react-popper";
 import { createPopperScope } from "@radix-ui/react-popper";
 import * as Portal from "@radix-ui/react-portal";
@@ -55,8 +61,8 @@ ComboBox.displayName = "ComboBox";
 
 //
 
-type ComboBoxInputProps = ComponentPropsWithoutRef<typeof Combobox.Input>;
-type ComboBoxInputElement = ElementRef<typeof Combobox.Input>;
+type ComboBoxInputProps = Omit<ComboboxInputProps<"input", string>, "as">;
+type ComboBoxInputElement = HTMLInputElement;
 
 export const ComboBoxInput = forwardRef<ComboBoxInputElement, ComboBoxInputProps>(
 	function ComboBoxInput(props, forwardedRef): JSX.Element {
@@ -89,9 +95,10 @@ export const ComboBoxInput = forwardRef<ComboBoxInputElement, ComboBoxInputProps
 ComboBoxInput.displayName = "ComboBoxInput";
 
 //
-
-type ComboBoxContentProps = ComponentPropsWithoutRef<typeof Combobox.Options>;
-type ComboBoxContentElement = ElementRef<typeof Combobox.Options>;
+type ComboBoxContentProps = Omit<ComboboxOptionsProps<"ul">, "as" | "children" | "unmount"> & {
+	children: ReactNode;
+};
+type ComboBoxContentElement = HTMLUListElement;
 
 export const ComboBoxContent = forwardRef<ComboBoxContentElement, ComboBoxContentProps>(
 	function ComboBoxContent(props, forwardedRef): JSX.Element {
@@ -131,7 +138,6 @@ export const ComboBoxContent = forwardRef<ComboBoxContentElement, ComboBoxConten
 							maxHeight: "var(--radix-combobox-content-available-height)",
 						}}
 					>
-						{/* @ts-expect-error No idea, probably because of missing `headlessui` generics. */}
 						<div className="p-1">{children}</div>
 					</Combobox.Options>
 				</PopperPrimitive.Content>
@@ -144,8 +150,10 @@ ComboBoxContent.displayName = "ComboBoxContent";
 
 //
 
-type ComboBoxItemProps = ComponentPropsWithoutRef<typeof Combobox.Option>;
-type ComboBoxItemElement = ElementRef<typeof Combobox.Option>;
+type ComboBoxItemProps = Omit<ComboboxOptionProps<"li", string>, "as" | "children"> & {
+	children: ReactNode;
+};
+type ComboBoxItemElement = HTMLLIElement;
 
 export const ComboBoxItem = forwardRef<ComboBoxItemElement, ComboBoxItemProps>(
 	function ComboBoxItem(props, forwardedRef): JSX.Element {
@@ -162,7 +170,6 @@ export const ComboBoxItem = forwardRef<ComboBoxItemElement, ComboBoxItemProps>(
 			>
 				{({ selected }) => {
 					return (
-						/* @ts-expect-error No idea, probably because of missing `headlessui` generics. */
 						<Fragment>
 							{selected ? (
 								<span className="absolute left-2 h-3.5 w-3.5 items-center justify-center">

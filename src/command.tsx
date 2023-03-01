@@ -1,12 +1,7 @@
 import { type DialogProps } from "@radix-ui/react-dialog";
 import { Command as CommandPrimitive, useCommandState } from "cmdk";
 import { SearchIcon } from "lucide-react";
-import {
-	type ComponentPropsWithoutRef,
-	type ElementRef,
-	type HTMLAttributes,
-	forwardRef,
-} from "react";
+import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
 import { Dialog, DialogContent } from "@/dialog";
 import { cn } from "@/lib/cn";
@@ -194,7 +189,7 @@ CommandItem.displayName = CommandPrimitive.Item.displayName;
 
 //
 
-type CommandShortcutProps = HTMLAttributes<HTMLSpanElement>;
+type CommandShortcutProps = ComponentPropsWithoutRef<"span">;
 
 export function CommandShortcut(props: CommandShortcutProps): JSX.Element {
 	const { className, ...rest } = props;

@@ -48,7 +48,7 @@ type SelectContentElement = ElementRef<typeof SelectPrimitive.Content>;
 
 export const SelectContent = forwardRef<SelectContentElement, SelectContentProps>(
 	function SelectContent(props, forwardedRef): JSX.Element {
-		const { children, className, ...rest } = props;
+		const { children, className, sideOffset = 4, ...rest } = props;
 
 		return (
 			<SelectPrimitive.Portal>
@@ -58,7 +58,13 @@ export const SelectContent = forwardRef<SelectContentElement, SelectContentProps
 						"relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400",
 						className,
 					)}
+					position="popper"
+					sideOffset={sideOffset}
 					{...rest}
+					style={{
+						width: "var(--radix-select-trigger-width)",
+						maxHeight: "var(--radix-select-content-available-height)",
+					}}
 				>
 					<SelectPrimitive.Viewport className="p-1">{children}</SelectPrimitive.Viewport>
 				</SelectPrimitive.Content>

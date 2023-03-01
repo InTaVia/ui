@@ -1,9 +1,9 @@
-import { type TextareaHTMLAttributes, forwardRef } from "react";
+import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
-type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
-type TextareaElement = HTMLTextAreaElement;
+type TextareaProps = ComponentPropsWithoutRef<"textarea">;
+type TextareaElement = ElementRef<"textarea">;
 
 export const Textarea = forwardRef<TextareaElement, TextareaProps>(function Textarea(
 	props,

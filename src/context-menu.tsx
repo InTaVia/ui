@@ -1,11 +1,6 @@
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
-import {
-	type ComponentPropsWithoutRef,
-	type ElementRef,
-	type HTMLAttributes,
-	forwardRef,
-} from "react";
+import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
@@ -258,7 +253,7 @@ ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName;
 
 //
 
-type ContextMenuShortcutProps = HTMLAttributes<HTMLSpanElement>;
+type ContextMenuShortcutProps = ComponentPropsWithoutRef<"span">;
 
 export function ContextMenuShortcut(props: ContextMenuShortcutProps): JSX.Element {
 	const { className, ...rest } = props;

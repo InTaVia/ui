@@ -1,11 +1,6 @@
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
-import {
-	type ComponentPropsWithoutRef,
-	type ElementRef,
-	type HTMLAttributes,
-	forwardRef,
-} from "react";
+import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
@@ -263,7 +258,7 @@ DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName;
 
 //
 
-type DropdownMenuShortcutProps = HTMLAttributes<HTMLSpanElement>;
+type DropdownMenuShortcutProps = ComponentPropsWithoutRef<"span">;
 
 export function DropdownMenuShortcut(props: DropdownMenuShortcutProps): JSX.Element {
 	const { className, ...rest } = props;

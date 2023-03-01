@@ -5,6 +5,7 @@ specifiers:
   "@changesets/cli": ^2.26.0
   "@commitlint/cli": ^17.4.4
   "@fontsource/inter": ^4.5.15
+  "@headlessui/react": ^1.7.12
   "@radix-ui/react-accordion": ^1.1.0
   "@radix-ui/react-alert-dialog": ^1.0.2
   "@radix-ui/react-aspect-ratio": ^1.0.1
@@ -19,6 +20,8 @@ specifiers:
   "@radix-ui/react-menubar": ^1.0.0
   "@radix-ui/react-navigation-menu": ^1.1.1
   "@radix-ui/react-popover": ^1.0.3
+  "@radix-ui/react-popper": ^1.1.0
+  "@radix-ui/react-portal": ^1.0.1
   "@radix-ui/react-progress": ^1.0.1
   "@radix-ui/react-radio-group": ^1.1.1
   "@radix-ui/react-scroll-area": ^1.0.2
@@ -74,6 +77,7 @@ specifiers:
   vite-tsconfig-paths: ^4.0.5
 
 dependencies:
+  "@headlessui/react": 1.7.12_biqbaboplfbrettd7655fr4n2y
   "@radix-ui/react-accordion": 1.1.0_biqbaboplfbrettd7655fr4n2y
   "@radix-ui/react-alert-dialog": 1.0.2_zula6vjvt3wdocc4mwcxqa6nzi
   "@radix-ui/react-aspect-ratio": 1.0.1_biqbaboplfbrettd7655fr4n2y
@@ -88,6 +92,8 @@ dependencies:
   "@radix-ui/react-menubar": 1.0.0_zula6vjvt3wdocc4mwcxqa6nzi
   "@radix-ui/react-navigation-menu": 1.1.1_biqbaboplfbrettd7655fr4n2y
   "@radix-ui/react-popover": 1.0.3_zula6vjvt3wdocc4mwcxqa6nzi
+  "@radix-ui/react-popper": 1.1.0_zula6vjvt3wdocc4mwcxqa6nzi
+  "@radix-ui/react-portal": 1.0.1_biqbaboplfbrettd7655fr4n2y
   "@radix-ui/react-progress": 1.0.1_biqbaboplfbrettd7655fr4n2y
   "@radix-ui/react-radio-group": 1.1.1_biqbaboplfbrettd7655fr4n2y
   "@radix-ui/react-scroll-area": 1.0.2_biqbaboplfbrettd7655fr4n2y
@@ -2971,6 +2977,21 @@ packages:
         integrity: sha512-FzleM9AxZQK2nqsTDtBiY0PMEVWvnKnuu2i09+p6DHvrHsuucoV2j0tmw+kAT3L4hvsLdAIDv6MdGehsPIdT+Q==,
       }
     dev: true
+
+  /@headlessui/react/1.7.12_biqbaboplfbrettd7655fr4n2y:
+    resolution:
+      {
+        integrity: sha512-FhSx5V+Qp0GvbTpaxyS+ymGDDNntCacClWsk/d8Upbr19g3AsPbjfPk4+m2CgJGcuCB5Dz7LpUIOAbvQTyjL2g==,
+      }
+    engines: { node: ">=10" }
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /@humanwhocodes/config-array/0.11.8:
     resolution:
@@ -7495,6 +7516,13 @@ packages:
       slice-ansi: 5.0.0
       string-width: 5.1.2
     dev: true
+
+  /client-only/0.0.1:
+    resolution:
+      {
+        integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==,
+      }
+    dev: false
 
   /cliui/6.0.0:
     resolution:

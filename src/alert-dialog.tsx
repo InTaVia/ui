@@ -1,10 +1,5 @@
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
-import {
-	type ComponentPropsWithoutRef,
-	type ElementRef,
-	type HTMLAttributes,
-	forwardRef,
-} from "react";
+import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
@@ -85,7 +80,7 @@ AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName;
 
 //
 
-type AlertDialogHeaderProps = HTMLAttributes<HTMLDivElement>;
+type AlertDialogHeaderProps = ComponentPropsWithoutRef<"div">;
 
 export function AlertDialogHeader(props: AlertDialogHeaderProps): JSX.Element {
 	const { className, ...rest } = props;
@@ -99,7 +94,7 @@ AlertDialogHeader.displayName = "AlertDialogHeader";
 
 //
 
-type AlertDialogFooterProps = HTMLAttributes<HTMLDivElement>;
+type AlertDialogFooterProps = ComponentPropsWithoutRef<"div">;
 
 export function AlertDialogFooter(props: AlertDialogFooterProps): JSX.Element {
 	const { className, ...rest } = props;

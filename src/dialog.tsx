@@ -1,11 +1,6 @@
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
-import {
-	type ComponentPropsWithoutRef,
-	type ElementRef,
-	type HTMLAttributes,
-	forwardRef,
-} from "react";
+import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
@@ -92,7 +87,7 @@ DialogContent.displayName = DialogPrimitive.Content.displayName;
 
 //
 
-type DialogHeaderProps = HTMLAttributes<HTMLDivElement>;
+type DialogHeaderProps = ComponentPropsWithoutRef<"div">;
 
 export function DialogHeader(props: DialogHeaderProps): JSX.Element {
 	const { className, ...rest } = props;
@@ -106,7 +101,7 @@ DialogHeader.displayName = "DialogHeader";
 
 //
 
-type DialogFooterProps = HTMLAttributes<HTMLDivElement>;
+type DialogFooterProps = ComponentPropsWithoutRef<"div">;
 
 export function DialogFooter(props: DialogFooterProps): JSX.Element {
 	const { className, ...rest } = props;

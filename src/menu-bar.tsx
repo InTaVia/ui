@@ -1,11 +1,6 @@
 import * as MenuBarPrimitive from "@radix-ui/react-menubar";
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
-import {
-	type ComponentPropsWithoutRef,
-	type ElementRef,
-	type HTMLAttributes,
-	forwardRef,
-} from "react";
+import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
@@ -300,7 +295,7 @@ MenuBarSeparator.displayName = MenuBarPrimitive.Separator.displayName;
 
 //
 
-type MenuBarShortcutProps = HTMLAttributes<HTMLSpanElement>;
+type MenuBarShortcutProps = ComponentPropsWithoutRef<"span">;
 
 export function MenuBarShortcut(props: MenuBarShortcutProps): JSX.Element {
 	const { className, ...rest } = props;

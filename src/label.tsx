@@ -16,7 +16,7 @@ export const Label = forwardRef<LabelElement, LabelProps>(function Label(
 		<LabelPrimitive.Root
 			ref={forwardedRef}
 			className={cn(
-				"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+				"text-xs font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
 				className,
 			)}
 			{...rest}

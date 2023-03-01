@@ -32,11 +32,11 @@ export const Default: Story = {
 					<div className="grid gap-2 py-4">
 						<div className="grid gap-y-1">
 							<Label htmlFor="name">Name</Label>
-							<Input id="name" defaultValue="Pedro Duarte" />
+							<Input id="name" defaultValue="Stefan Probst" />
 						</div>
 						<div className="grid gap-y-1">
 							<Label htmlFor="username">Username</Label>
-							<Input id="username" defaultValue="@peduarte" />
+							<Input id="username" defaultValue="@stefanprobst" />
 						</div>
 					</div>
 					<div className="flex">

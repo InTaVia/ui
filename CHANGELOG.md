@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.10
+
+### Patch Changes
+
+- [`e9ea400`](https://github.com/InTaVia/ui/commit/e9ea4000aac55ee14fa664b8e4074363f0561794) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add combobox
+
 ## 0.1.9
 
 ### Patch Changes

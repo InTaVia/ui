@@ -5,6 +5,8 @@ import {
 	CalculatorIcon,
 	CalendarIcon,
 	CheckCircle2Icon,
+	CheckIcon,
+	ChevronsUpDownIcon,
 	CircleIcon,
 	CreditCardIcon,
 	HelpCircleIcon,
@@ -103,7 +105,7 @@ export const Default: Story = {
 	},
 };
 
-export const DropdownCommand: Story = {
+export const CommandDropdownMenu: Story = {
 	args: {},
 	render(args) {
 		const labels = [
@@ -283,6 +285,86 @@ export const CommandPopover: Story = {
 					</PopoverContent>
 				</Popover>
 			</div>
+		);
+	},
+};
+
+export const ComboBox: Story = {
+	args: {},
+	render(args) {
+		const frameworks = [
+			{
+				value: "next.js",
+				label: "Next.js",
+			},
+			{
+				value: "sveltekit",
+				label: "SvelteKit",
+			},
+			{
+				value: "nuxt.js",
+				label: "Nuxt.js",
+			},
+			{
+				value: "remix",
+				label: "Remix",
+			},
+			{
+				value: "astro",
+				label: "Astro",
+			},
+		];
+
+		// eslint-disable-next-line react-hooks/rules-of-hooks
+		const [open, setOpen] = useState(false);
+		// eslint-disable-next-line react-hooks/rules-of-hooks
+		const [value, setValue] = useState("");
+
+		return (
+			<Popover open={open} onOpenChange={setOpen}>
+				<PopoverTrigger asChild>
+					<Button
+						variant="outline"
+						role="combobox"
+						aria-expanded={open}
+						className="w-[200px] justify-between"
+					>
+						{value
+							? frameworks.find((framework) => {
+									return framework.value === value;
+							  })?.label
+							: "Select framework..."}
+						<ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+					</Button>
+				</PopoverTrigger>
+				<PopoverContent className="w-[200px] p-0">
+					<Command {...args}>
+						<CommandInput placeholder="Search framework..." />
+						<CommandEmpty>No framework found.</CommandEmpty>
+						<CommandGroup>
+							{frameworks.map((framework) => {
+								return (
+									<CommandItem
+										key={framework.value}
+										onSelect={(currentValue) => {
+											setValue(currentValue === value ? "" : currentValue);
+											setOpen(false);
+										}}
+									>
+										<CheckIcon
+											className={cn(
+												"mr-2 h-4 w-4",
+												value === framework.value ? "opacity-100" : "opacity-0",
+											)}
+										/>
+										{framework.label}
+									</CommandItem>
+								);
+							})}
+						</CommandGroup>
+					</Command>
+				</PopoverContent>
+			</Popover>
 		);
 	},
 };

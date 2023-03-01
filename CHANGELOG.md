@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.9
+
+### Patch Changes
+
+- [`eada251`](https://github.com/InTaVia/ui/commit/eada2517af9f69888008663efdd6265d794fd2a6) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add icon-button component
+
 ## 0.1.8
 
 ### Patch Changes

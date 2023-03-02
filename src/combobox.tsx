@@ -73,13 +73,13 @@ export const ComboBoxInput = forwardRef<ComboBoxInputElement, ComboBoxInputProps
 			<PopperPrimitive.Anchor asChild {...popperScope}>
 				<div
 					className={cn(
-						"relative flex h-10 w-full items-center justify-between rounded-md border border-neutral-300 bg-transparent py-2 px-3 text-sm placeholder:text-neutral-400 focus-within:outline-none focus-within:ring-2 focus-within:ring-neutral-400 focus-within:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-50 dark:focus-within:ring-neutral-400 dark:focus-within:ring-offset-neutral-900",
+						"relative flex h-10 w-full items-center justify-between rounded-md border border-neutral-300 bg-transparent py-2 px-3 text-sm focus-within:outline-none focus-within:ring-2 focus-within:ring-neutral-400 focus-within:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-50 dark:focus-within:ring-neutral-400 dark:focus-within:ring-offset-neutral-900",
 						className,
 					)}
 				>
 					<Combobox.Input
 						ref={forwardedRef}
-						className="w-full min-w-0 bg-transparent pr-4 focus:outline-none"
+						className="w-full min-w-0 bg-transparent pr-4 placeholder:text-neutral-400 focus:outline-none"
 						{...rest}
 					/>
 					<Combobox.Button className="absolute inset-y-0 right-0 pr-2">

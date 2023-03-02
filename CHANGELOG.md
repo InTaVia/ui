@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.14
+
+### Patch Changes
+
+- [`a690d07`](https://github.com/InTaVia/ui/commit/a690d07f036fe3255b98258b150904920180ab13) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - fix combobox popover overflow
+
 ## 0.1.13
 
 ### Patch Changes

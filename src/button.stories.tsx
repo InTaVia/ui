@@ -26,7 +26,7 @@ export const Loading: Story = {
 	render(args) {
 		return (
 			<Button {...args}>
-				<Loader2Icon className="mr-2 h-4 w-4 shrink-0 animate-spin" />
+				<Loader2Icon className="h-4 w-4 shrink-0 animate-spin" />
 				Please wait
 			</Button>
 		);

@@ -1,5 +1,13 @@
 # @intavia/ui
 
+## 0.1.13
+
+### Patch Changes
+
+- [`07e16b8`](https://github.com/InTaVia/ui/commit/07e16b8dc990e7c3e3641f99579205268bc2edca) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - remove combobox portal to fix combobox popover
+  in dialog
+
 ## 0.1.12
 
 ### Patch Changes

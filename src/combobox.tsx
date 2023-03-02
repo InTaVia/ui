@@ -7,7 +7,6 @@ import {
 } from "@headlessui/react";
 import * as PopperPrimitive from "@radix-ui/react-popper";
 import { createPopperScope } from "@radix-ui/react-popper";
-import * as Portal from "@radix-ui/react-portal";
 import * as Separator from "@radix-ui/react-separator";
 import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
 import {
@@ -80,7 +79,7 @@ export const ComboBoxInput = forwardRef<ComboBoxInputElement, ComboBoxInputProps
 				>
 					<Combobox.Input
 						ref={forwardedRef}
-						className="min-w-0 pr-4 focus:outline-none"
+						className="w-full min-w-0 bg-transparent pr-4 focus:outline-none"
 						{...rest}
 					/>
 					<Combobox.Button className="absolute inset-y-0 right-0 pr-2">
@@ -106,42 +105,43 @@ export const ComboBoxContent = forwardRef<ComboBoxContentElement, ComboBoxConten
 
 		const popperScope = usePopperScope(__scopeComboBox);
 
+		// FIXME: this should be rendered in a portal, but `headlessui` does not
+		// currently seem to work when wrapped in `@radix-ui/react-portal` and used
+		// in a dialog..
 		return (
-			<Portal.Root>
-				<PopperPrimitive.Content
-					{...popperScope}
-					align="start"
-					collisionPadding={10}
-					sideOffset={4}
+			<PopperPrimitive.Content
+				{...popperScope}
+				align="start"
+				collisionPadding={10}
+				sideOffset={4}
+				style={{
+					/** Ensure border-box for `floating-ui` calculations. */
+					boxSizing: "border-box",
+					...{
+						"--radix-combobox-content-transform-origin": "var(--radix-popper-transform-origin)",
+						"--radix-combobox-content-available-width": "var(--radix-popper-available-width)",
+						"--radix-combobox-content-available-height": "var(--radix-popper-available-height)",
+						"--radix-combobox-trigger-width": "var(--radix-popper-anchor-width)",
+						"--radix-combobox-trigger-height": "var(--radix-popper-anchor-height)",
+					},
+				}}
+			>
+				<Combobox.Options
+					ref={forwardedRef}
+					className={cn(
+						"mt-1",
+						"relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400",
+						className,
+					)}
 					style={{
-						/** Ensure border-box for `floating-ui` calculations. */
-						boxSizing: "border-box",
-						...{
-							"--radix-combobox-content-transform-origin": "var(--radix-popper-transform-origin)",
-							"--radix-combobox-content-available-width": "var(--radix-popper-available-width)",
-							"--radix-combobox-content-available-height": "var(--radix-popper-available-height)",
-							"--radix-combobox-trigger-width": "var(--radix-popper-anchor-width)",
-							"--radix-combobox-trigger-height": "var(--radix-popper-anchor-height)",
-						},
+						width: "var(--radix-combobox-trigger-width)",
+						maxHeight: "var(--radix-combobox-content-available-height)",
 					}}
+					{...rest}
 				>
-					<Combobox.Options
-						ref={forwardedRef}
-						className={cn(
-							"mt-1",
-							"relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400",
-							className,
-						)}
-						{...rest}
-						style={{
-							width: "var(--radix-combobox-trigger-width)",
-							maxHeight: "var(--radix-combobox-content-available-height)",
-						}}
-					>
-						<div className="p-1">{children}</div>
-					</Combobox.Options>
-				</PopperPrimitive.Content>
-			</Portal.Root>
+					<div className="p-1">{children}</div>
+				</Combobox.Options>
+			</PopperPrimitive.Content>
 		);
 	},
 );

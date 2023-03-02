@@ -131,7 +131,7 @@ export const ComboBoxContent = forwardRef<ComboBoxContentElement, ComboBoxConten
 					ref={forwardedRef}
 					className={cn(
 						"mt-1",
-						"relative overflow-y-auto z-50 min-w-[8rem] overflow-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400",
+						"relative overflow-y-auto z-50 min-w-[8rem] overflow-x-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400",
 						className,
 					)}
 					style={{

@@ -1,5 +1,15 @@
 # @intavia/ui
 
+## 0.1.15
+
+### Patch Changes
+
+- [`4f4f7ce`](https://github.com/InTaVia/ui/commit/4f4f7ceac274a659bf7fc5f65d85be69a080c2e3) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - fix combobox popover overflow
+
+- [`51b604c`](https://github.com/InTaVia/ui/commit/51b604c1dfb1f25c54db395711b18d287b78a9bb) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - adjust button gap
+
 ## 0.1.14
 
 ### Patch Changes

@@ -8,7 +8,7 @@ import {
 import * as PopperPrimitive from "@radix-ui/react-popper";
 import { createPopperScope } from "@radix-ui/react-popper";
 import * as Separator from "@radix-ui/react-separator";
-import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
+import { CheckIcon, ChevronsDownIcon } from "lucide-react";
 import {
 	type ComponentPropsWithoutRef,
 	type ElementRef,
@@ -83,7 +83,7 @@ export const ComboBoxInput = forwardRef<ComboBoxInputElement, ComboBoxInputProps
 						{...rest}
 					/>
 					<Combobox.Button className="absolute inset-y-0 right-0 pr-2">
-						<ChevronsUpDownIcon className="h-4 w-4 opacity-50" />
+						<ChevronsDownIcon className="h-4 w-4 opacity-50" />
 					</Combobox.Button>
 				</div>
 			</PopperPrimitive.Anchor>

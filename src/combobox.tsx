@@ -117,6 +117,7 @@ export const ComboBoxContent = forwardRef<ComboBoxContentElement, ComboBoxConten
 				style={{
 					/** Ensure border-box for `floating-ui` calculations. */
 					boxSizing: "border-box",
+					zIndex: 100,
 					...{
 						"--radix-combobox-content-transform-origin": "var(--radix-popper-transform-origin)",
 						"--radix-combobox-content-available-width": "var(--radix-popper-available-width)",
@@ -130,7 +131,7 @@ export const ComboBoxContent = forwardRef<ComboBoxContentElement, ComboBoxConten
 					ref={forwardedRef}
 					className={cn(
 						"mt-1",
-						"relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400",
+						"relative overflow-y-auto z-50 min-w-[8rem] overflow-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400",
 						className,
 					)}
 					style={{

@@ -130,7 +130,7 @@ export const DialogTitle = forwardRef<DialogTitleElement, DialogTitleProps>(func
 	return (
 		<DialogPrimitive.Title
 			ref={forwardedRef}
-			className={cn("text-lg font-semibold text-neutral-900", "dark:text-neutral-50", className)}
+			className={cn("text-lg font-semibold text-neutral-900 dark:text-neutral-50", className)}
 			{...rest}
 		/>
 	);
@@ -150,7 +150,7 @@ export const DialogDescription = forwardRef<DialogDescriptionElement, DialogDesc
 		return (
 			<DialogPrimitive.Description
 				ref={forwardedRef}
-				className={cn("text-sm text-neutral-500", "dark:text-neutral-400", className)}
+				className={cn("text-sm text-neutral-500 dark:text-neutral-400", className)}
 				{...rest}
 			/>
 		);

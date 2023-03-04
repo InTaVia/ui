@@ -235,7 +235,7 @@ export const CommandPopover: Story = {
 		const [selectedStatus, setSelectedStatus] = useState<Status | null>(null);
 
 		return (
-			<div className="flex items-center space-x-4">
+			<div className="flex items-center gap-x-4">
 				<p className="text-sm text-neutral-500 dark:text-neutral-400">Status</p>
 				<Popover open={open} onOpenChange={setOpen}>
 					<PopoverTrigger asChild>

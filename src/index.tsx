@@ -17,6 +17,7 @@ export * from "@/label";
 export { cn } from "@/lib/cn";
 export * from "@/menu-bar";
 export * from "@/navigation-menu";
+export * from "@/panel-group";
 export * from "@/popover";
 export * from "@/progress";
 export * from "@/radio-group";

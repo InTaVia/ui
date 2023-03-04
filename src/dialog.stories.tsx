@@ -59,3 +59,77 @@ export const Default: Story = {
 		);
 	},
 };
+
+export const Overflow: Story = {
+	args: {},
+	render(args) {
+		return (
+			<Dialog {...args}>
+				<DialogTrigger asChild>
+					<Button variant="outline">Edit Profile</Button>
+				</DialogTrigger>
+				<DialogContent className="sm:max-w-[425px]">
+					<DialogHeader>
+						<DialogTitle>Edit profile</DialogTitle>
+						<DialogDescription>
+							Make changes to your profile here. Click save when you&apos;re done.
+						</DialogDescription>
+					</DialogHeader>
+					<div className="grid gap-4 py-4">
+						<p>
+							Irure proident Lorem laborum laboris mollit sit dolore cillum. Cupidatat aliqua
+							incididunt ipsum est proident deserunt exercitation Lorem sunt nisi amet esse. Laboris
+							magna do in esse proident qui eu. Esse tempor cillum aliquip aute labore elit occaecat
+							cupidatat id excepteur dolore. Nisi irure sunt fugiat magna duis veniam qui mollit
+							aute Lorem aliqua et commodo. Laboris elit proident commodo do dolor officia tempor ea
+							voluptate exercitation nisi ea.
+						</p>
+						<p>
+							Irure proident Lorem laborum laboris mollit sit dolore cillum. Cupidatat aliqua
+							incididunt ipsum est proident deserunt exercitation Lorem sunt nisi amet esse. Laboris
+							magna do in esse proident qui eu. Esse tempor cillum aliquip aute labore elit occaecat
+							cupidatat id excepteur dolore. Nisi irure sunt fugiat magna duis veniam qui mollit
+							aute Lorem aliqua et commodo. Laboris elit proident commodo do dolor officia tempor ea
+							voluptate exercitation nisi ea.
+						</p>
+						<p>
+							Irure proident Lorem laborum laboris mollit sit dolore cillum. Cupidatat aliqua
+							incididunt ipsum est proident deserunt exercitation Lorem sunt nisi amet esse. Laboris
+							magna do in esse proident qui eu. Esse tempor cillum aliquip aute labore elit occaecat
+							cupidatat id excepteur dolore. Nisi irure sunt fugiat magna duis veniam qui mollit
+							aute Lorem aliqua et commodo. Laboris elit proident commodo do dolor officia tempor ea
+							voluptate exercitation nisi ea.
+						</p>
+						<p>
+							Irure proident Lorem laborum laboris mollit sit dolore cillum. Cupidatat aliqua
+							incididunt ipsum est proident deserunt exercitation Lorem sunt nisi amet esse. Laboris
+							magna do in esse proident qui eu. Esse tempor cillum aliquip aute labore elit occaecat
+							cupidatat id excepteur dolore. Nisi irure sunt fugiat magna duis veniam qui mollit
+							aute Lorem aliqua et commodo. Laboris elit proident commodo do dolor officia tempor ea
+							voluptate exercitation nisi ea.
+						</p>
+						<p>
+							Irure proident Lorem laborum laboris mollit sit dolore cillum. Cupidatat aliqua
+							incididunt ipsum est proident deserunt exercitation Lorem sunt nisi amet esse. Laboris
+							magna do in esse proident qui eu. Esse tempor cillum aliquip aute labore elit occaecat
+							cupidatat id excepteur dolore. Nisi irure sunt fugiat magna duis veniam qui mollit
+							aute Lorem aliqua et commodo. Laboris elit proident commodo do dolor officia tempor ea
+							voluptate exercitation nisi ea.
+						</p>
+						<p>
+							Irure proident Lorem laborum laboris mollit sit dolore cillum. Cupidatat aliqua
+							incididunt ipsum est proident deserunt exercitation Lorem sunt nisi amet esse. Laboris
+							magna do in esse proident qui eu. Esse tempor cillum aliquip aute labore elit occaecat
+							cupidatat id excepteur dolore. Nisi irure sunt fugiat magna duis veniam qui mollit
+							aute Lorem aliqua et commodo. Laboris elit proident commodo do dolor officia tempor ea
+							voluptate exercitation nisi ea.
+						</p>
+					</div>
+					<DialogFooter>
+						<Button type="submit">Save changes</Button>
+					</DialogFooter>
+				</DialogContent>
+			</Dialog>
+		);
+	},
+};

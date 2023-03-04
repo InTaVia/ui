@@ -1,5 +1,18 @@
 # @intavia/ui
 
+## 0.1.16
+
+### Patch Changes
+
+- [`c6d7eab`](https://github.com/InTaVia/ui/commit/c6d7eab5a9ec1023bb7abeb955805049b0da8e9f) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add side-dialog
+
+- [`6165481`](https://github.com/InTaVia/ui/commit/61654810ccebe46855f42df8514f80ce79e96074) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add resizable panels
+
+- [`9140947`](https://github.com/InTaVia/ui/commit/9140947564850d2b14f62cbbc0b56a056306907b) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add loading indicator
+
 ## 0.1.15
 
 ### Patch Changes

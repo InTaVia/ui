@@ -2,7 +2,15 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 
 import { Button } from "@/button";
-import { ComboBox, ComboBoxContent, ComboBoxEmpty, ComboBoxInput, ComboBoxItem } from "@/combobox";
+import {
+	ComboBox,
+	ComboBoxButton,
+	ComboBoxContent,
+	ComboBoxEmpty,
+	ComboBoxInput,
+	ComboBoxItem,
+	ComboBoxTrigger,
+} from "@/combobox";
 import { Dialog, DialogContent, DialogTrigger } from "@/dialog";
 
 const meta = {
@@ -40,12 +48,14 @@ export const Default: Story = {
 
 		return (
 			<ComboBox {...args} value={selectedPerson} onValueChange={setSelectedPerson}>
-				<ComboBoxInput
-					className="w-[200px]"
-					onChange={(event) => {
-						setSearchTerm(event.currentTarget.value);
-					}}
-				/>
+				<ComboBoxTrigger className="w-[200px]">
+					<ComboBoxInput
+						onChange={(event) => {
+							setSearchTerm(event.currentTarget.value);
+						}}
+					/>
+					<ComboBoxButton />
+				</ComboBoxTrigger>
 				<ComboBoxContent>
 					{filteredPeople.map((person) => {
 						return (
@@ -92,12 +102,14 @@ export const DialogCombobox: Story = {
 				</DialogTrigger>
 				<DialogContent>
 					<ComboBox {...args} value={selectedPerson} onValueChange={setSelectedPerson}>
-						<ComboBoxInput
-							className="w-[200px]"
-							onChange={(event) => {
-								setSearchTerm(event.currentTarget.value);
-							}}
-						/>
+						<ComboBoxTrigger className="w-[200px]">
+							<ComboBoxInput
+								onChange={(event) => {
+									setSearchTerm(event.currentTarget.value);
+								}}
+							/>
+							<ComboBoxButton />
+						</ComboBoxTrigger>
 						<ComboBoxContent>
 							{filteredPeople.map((person) => {
 								return (

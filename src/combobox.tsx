@@ -1,4 +1,5 @@
 import {
+	type ComboboxButtonProps,
 	type ComboboxInputProps,
 	type ComboboxOptionProps,
 	type ComboboxOptionsProps,
@@ -60,33 +61,52 @@ ComboBox.displayName = "ComboBox";
 
 //
 
-type ComboBoxInputProps = Omit<ComboboxInputProps<"input", string>, "as">;
-type ComboBoxInputElement = HTMLInputElement;
+type ComboBoxTriggerProps = ComponentPropsWithoutRef<"div">;
+type ComboBoxTriggerElement = ElementRef<"div">;
 
-export const ComboBoxInput = forwardRef<ComboBoxInputElement, ComboBoxInputProps>(
-	function ComboBoxInput(props, forwardedRef): JSX.Element {
-		const { className, ...rest } = props;
+export const ComboBoxTrigger = forwardRef<ComboBoxTriggerElement, ComboBoxTriggerProps>(
+	function ComboBoxTrigger(props, forwardedRef): JSX.Element {
+		const { children, className, ...rest } = props;
 
 		const popperScope = usePopperScope(__scopeComboBox);
 
 		return (
 			<PopperPrimitive.Anchor asChild {...popperScope}>
 				<div
+					ref={forwardedRef}
 					className={cn(
 						"relative flex h-10 w-full items-center justify-between rounded-md border border-neutral-300 bg-transparent py-2 px-3 text-sm focus-within:outline-none focus-within:ring-2 focus-within:ring-neutral-400 focus-within:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-50 dark:focus-within:ring-neutral-400 dark:focus-within:ring-offset-neutral-900",
 						className,
 					)}
+					{...rest}
 				>
-					<Combobox.Input
-						ref={forwardedRef}
-						className="w-full min-w-0 bg-transparent pr-4 placeholder:text-neutral-400 focus:outline-none"
-						{...rest}
-					/>
-					<Combobox.Button className="absolute inset-y-0 right-0 pr-2">
-						<ChevronsDownIcon className="h-4 w-4 opacity-50" />
-					</Combobox.Button>
+					{children}
 				</div>
 			</PopperPrimitive.Anchor>
+		);
+	},
+);
+
+ComboBoxTrigger.displayName = "ComboBoxTrigger";
+
+//
+
+type ComboBoxInputProps = Omit<ComboboxInputProps<"input", string>, "as">;
+type ComboBoxInputElement = ElementRef<"input">;
+
+export const ComboBoxInput = forwardRef<ComboBoxInputElement, ComboBoxInputProps>(
+	function ComboBoxInput(props, forwardedRef): JSX.Element {
+		const { className, ...rest } = props;
+
+		return (
+			<Combobox.Input
+				ref={forwardedRef}
+				className={cn(
+					"w-full min-w-0 bg-transparent pr-4 placeholder:text-neutral-400 focus:outline-none",
+					className,
+				)}
+				{...rest}
+			/>
 		);
 	},
 );
@@ -94,10 +114,34 @@ export const ComboBoxInput = forwardRef<ComboBoxInputElement, ComboBoxInputProps
 ComboBoxInput.displayName = "ComboBoxInput";
 
 //
+
+type ComboBoxButtonProps = Omit<ComboboxButtonProps<"button">, "as">;
+type ComboBoxButtonElement = ElementRef<"button">;
+
+export const ComboBoxButton = forwardRef<ComboBoxButtonElement, ComboBoxButtonProps>(
+	function ComboBoxButton(props, forwardedRef): JSX.Element {
+		const { className, ...rest } = props;
+
+		return (
+			<Combobox.Button
+				ref={forwardedRef}
+				className={cn("absolute inset-y-0 right-0 pr-2", className)}
+				{...rest}
+			>
+				<ChevronsDownIcon className="h-4 w-4 opacity-50" />
+			</Combobox.Button>
+		);
+	},
+);
+
+ComboBoxButton.displayName = "ComboBoxButton";
+
+//
+
 type ComboBoxContentProps = Omit<ComboboxOptionsProps<"ul">, "as" | "children" | "unmount"> & {
 	children: ReactNode;
 };
-type ComboBoxContentElement = HTMLUListElement;
+type ComboBoxContentElement = ElementRef<"ul">;
 
 export const ComboBoxContent = forwardRef<ComboBoxContentElement, ComboBoxContentProps>(
 	function ComboBoxContent(props, forwardedRef): JSX.Element {
@@ -154,7 +198,7 @@ ComboBoxContent.displayName = "ComboBoxContent";
 type ComboBoxItemProps = Omit<ComboboxOptionProps<"li", string>, "as" | "children"> & {
 	children: ReactNode;
 };
-type ComboBoxItemElement = HTMLLIElement;
+type ComboBoxItemElement = ElementRef<"li">;
 
 export const ComboBoxItem = forwardRef<ComboBoxItemElement, ComboBoxItemProps>(
 	function ComboBoxItem(props, forwardedRef): JSX.Element {

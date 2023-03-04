@@ -18,12 +18,15 @@ const loaderVariants = cva("shrink-0 animate-spin", {
 });
 
 type LoadingIndicatorProps = LucideProps &
-	VariantProps<typeof loaderVariants> & { label: ReactNode };
+	VariantProps<typeof loaderVariants> & {
+		/** @default 'Loading...'' */
+		label?: ReactNode;
+	};
 type LoadingIndicatorElement = ElementRef<"svg">;
 
 export const LoadingIndicator = forwardRef<LoadingIndicatorElement, LoadingIndicatorProps>(
 	function LoadingIndicator(props, forwardedRef): JSX.Element {
-		const { className, label, size, ...rest } = props;
+		const { className, label = "Loading...", size, ...rest } = props;
 
 		return (
 			<div aria-valuemin={0} aria-valuemax={100} role="progressbar">

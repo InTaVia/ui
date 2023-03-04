@@ -50,7 +50,7 @@ export const ContextMenuSubTrigger = forwardRef<
 			{...rest}
 		>
 			{children}
-			<ChevronRightIcon className="ml-auto h-4 w-4" />
+			<ChevronRightIcon aria-hidden="true" className="ml-auto h-4 w-4" />
 		</ContextMenuPrimitive.SubTrigger>
 	);
 });
@@ -160,7 +160,7 @@ export const ContextMenuCheckboxItem = forwardRef<
 		>
 			<span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
 				<ContextMenuPrimitive.ItemIndicator>
-					<CheckIcon className="h-4 w-4" />
+					<CheckIcon aria-hidden="true" className="h-4 w-4" />
 				</ContextMenuPrimitive.ItemIndicator>
 			</span>
 			{children}
@@ -192,7 +192,7 @@ export const ContextMenuRadioItem = forwardRef<
 		>
 			<span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
 				<ContextMenuPrimitive.ItemIndicator>
-					<CircleIcon className="h-2 w-2 fill-current" />
+					<CircleIcon aria-hidden="true" className="h-2 w-2 fill-current" />
 				</ContextMenuPrimitive.ItemIndicator>
 			</span>
 			{children}

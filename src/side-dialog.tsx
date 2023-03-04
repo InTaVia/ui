@@ -176,7 +176,7 @@ export const SideDialogContent = forwardRef<SideDialogContentElement, SideDialog
 				>
 					{children}
 					<DialogPrimitive.Close className="absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-neutral-100 dark:focus:ring-neutral-400 dark:focus:ring-offset-neutral-900 dark:data-[state=open]:bg-neutral-800">
-						<XIcon className="h-4 w-4" />
+						<XIcon aria-hidden="true" className="h-4 w-4" />
 						<span className="sr-only">Close</span>
 					</DialogPrimitive.Close>
 				</DialogPrimitive.Content>

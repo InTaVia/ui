@@ -43,7 +43,10 @@ export const RadioGroupItem = forwardRef<RadioGroupItemElement, RadioGroupItemPr
 				{...rest}
 			>
 				<RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-					<CircleIcon className="h-2.5 w-2.5 fill-neutral-900 dark:fill-neutral-50" />
+					<CircleIcon
+						aria-hidden="true"
+						className="h-2.5 w-2.5 fill-neutral-900 dark:fill-neutral-50"
+					/>
 				</RadioGroupPrimitive.Indicator>
 			</RadioGroupPrimitive.Item>
 		);

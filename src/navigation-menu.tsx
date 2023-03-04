@@ -77,8 +77,8 @@ export const NavigationMenuTrigger = forwardRef<
 		>
 			{children}{" "}
 			<ChevronDownIcon
-				className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
 				aria-hidden="true"
+				className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
 			/>
 		</NavigationMenuPrimitive.Trigger>
 	);

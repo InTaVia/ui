@@ -93,7 +93,7 @@ export const MenuBarSubTrigger = forwardRef<MenuBarSubTriggerElement, MenuBarSub
 				{...rest}
 			>
 				{children}
-				<ChevronRightIcon className="ml-auto h-4 w-4" />
+				<ChevronRightIcon aria-hidden="true" className="ml-auto h-4 w-4" />
 			</MenuBarPrimitive.SubTrigger>
 		);
 	},
@@ -203,7 +203,7 @@ export const MenuBarCheckboxItem = forwardRef<MenuBarCheckboxItemElement, MenuBa
 			>
 				<span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
 					<MenuBarPrimitive.ItemIndicator>
-						<CheckIcon className="h-4 w-4" />
+						<CheckIcon aria-hidden="true" className="h-4 w-4" />
 					</MenuBarPrimitive.ItemIndicator>
 				</span>
 				{children}
@@ -234,7 +234,7 @@ export const MenuBarRadioItem = forwardRef<MenuBarRadioItemElement, MenuBarRadio
 			>
 				<span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
 					<MenuBarPrimitive.ItemIndicator>
-						<CircleIcon className="h-2 w-2 fill-current" />
+						<CircleIcon aria-hidden="true" className="h-2 w-2 fill-current" />
 					</MenuBarPrimitive.ItemIndicator>
 				</span>
 				{children}

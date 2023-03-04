@@ -1,4 +1,4 @@
-import * as ToastPrimitives from "@radix-ui/react-toast";
+import * as ToastPrimitive from "@radix-ui/react-toast";
 import { type VariantProps, cva } from "class-variance-authority";
 import { XIcon } from "lucide-react";
 import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
@@ -22,19 +22,19 @@ const toastVariants = cva(
 
 //
 
-export const ToastProvider = ToastPrimitives.Provider;
+export const ToastProvider = ToastPrimitive.Provider;
 
 //
 
-type ToastViewportProps = ComponentPropsWithoutRef<typeof ToastPrimitives.ToastViewport>;
-type ToastViewportElement = ElementRef<typeof ToastPrimitives.ToastViewport>;
+type ToastViewportProps = ComponentPropsWithoutRef<typeof ToastPrimitive.ToastViewport>;
+type ToastViewportElement = ElementRef<typeof ToastPrimitive.ToastViewport>;
 
 export const ToastViewport = forwardRef<ToastViewportElement, ToastViewportProps>(
 	function ToastViewport(props, forwardedRef): JSX.Element {
 		const { className, ...rest } = props;
 
 		return (
-			<ToastPrimitives.Viewport
+			<ToastPrimitive.Viewport
 				ref={forwardedRef}
 				className={cn(
 					"fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:top-auto sm:bottom-0 sm:right-0 sm:flex-col md:max-w-[420px]",
@@ -46,13 +46,13 @@ export const ToastViewport = forwardRef<ToastViewportElement, ToastViewportProps
 	},
 );
 
-ToastViewport.displayName = ToastPrimitives.Viewport.displayName;
+ToastViewport.displayName = ToastPrimitive.Viewport.displayName;
 
 //
 
-type ToastProps = ComponentPropsWithoutRef<typeof ToastPrimitives.Toast> &
+type ToastProps = ComponentPropsWithoutRef<typeof ToastPrimitive.Toast> &
 	VariantProps<typeof toastVariants>;
-type ToastElement = ElementRef<typeof ToastPrimitives.Toast>;
+type ToastElement = ElementRef<typeof ToastPrimitive.Toast>;
 
 export const Toast = forwardRef<ToastElement, ToastProps>(function Toast(
 	props,
@@ -61,7 +61,7 @@ export const Toast = forwardRef<ToastElement, ToastProps>(function Toast(
 	const { className, variant, ...rest } = props;
 
 	return (
-		<ToastPrimitives.Root
+		<ToastPrimitive.Root
 			ref={forwardedRef}
 			className={cn(toastVariants({ variant }), className)}
 			{...rest}
@@ -69,12 +69,12 @@ export const Toast = forwardRef<ToastElement, ToastProps>(function Toast(
 	);
 });
 
-Toast.displayName = ToastPrimitives.Root.displayName;
+Toast.displayName = ToastPrimitive.Root.displayName;
 
 //
 
-type ToastActionProps = ComponentPropsWithoutRef<typeof ToastPrimitives.ToastAction>;
-type ToastActionElement = ElementRef<typeof ToastPrimitives.ToastAction>;
+type ToastActionProps = ComponentPropsWithoutRef<typeof ToastPrimitive.ToastAction>;
+type ToastActionElement = ElementRef<typeof ToastPrimitive.ToastAction>;
 
 export const ToastAction = forwardRef<ToastActionElement, ToastActionProps>(function ToastAction(
 	props,
@@ -83,7 +83,7 @@ export const ToastAction = forwardRef<ToastActionElement, ToastActionProps>(func
 	const { className, ...rest } = props;
 
 	return (
-		<ToastPrimitives.Action
+		<ToastPrimitive.Action
 			ref={forwardedRef}
 			className={cn(
 				"inline-flex h-8 shrink-0 items-center justify-center rounded-md border border-neutral-200 bg-transparent px-3 text-sm font-medium transition-colors hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-red-100 group-[.destructive]:hover:border-neutral-50 group-[.destructive]:hover:bg-red-100 group-[.destructive]:hover:text-red-600 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600 dark:border-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-700 dark:hover:text-neutral-100 dark:focus:ring-neutral-400 dark:focus:ring-offset-neutral-900 dark:data-[state=open]:bg-neutral-800",
@@ -94,12 +94,12 @@ export const ToastAction = forwardRef<ToastActionElement, ToastActionProps>(func
 	);
 });
 
-ToastAction.displayName = ToastPrimitives.Action.displayName;
+ToastAction.displayName = ToastPrimitive.Action.displayName;
 
 //
 
-type ToastCloseProps = ComponentPropsWithoutRef<typeof ToastPrimitives.ToastClose>;
-type ToastCloseElement = ElementRef<typeof ToastPrimitives.ToastClose>;
+type ToastCloseProps = ComponentPropsWithoutRef<typeof ToastPrimitive.ToastClose>;
+type ToastCloseElement = ElementRef<typeof ToastPrimitive.ToastClose>;
 
 export const ToastClose = forwardRef<ToastCloseElement, ToastCloseProps>(function ToastClose(
 	props,
@@ -108,7 +108,7 @@ export const ToastClose = forwardRef<ToastCloseElement, ToastCloseProps>(functio
 	const { className, ...rest } = props;
 
 	return (
-		<ToastPrimitives.Close
+		<ToastPrimitive.Close
 			ref={forwardedRef}
 			className={cn(
 				"absolute top-2 right-2 rounded-md p-1 text-neutral-500 opacity-0 transition-opacity hover:text-neutral-900 focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600 dark:hover:text-neutral-50",
@@ -117,17 +117,17 @@ export const ToastClose = forwardRef<ToastCloseElement, ToastCloseProps>(functio
 			toast-close=""
 			{...rest}
 		>
-			<XIcon className="h-4 w-4" />
-		</ToastPrimitives.Close>
+			<XIcon aria-hidden="true" className="h-4 w-4" />
+		</ToastPrimitive.Close>
 	);
 });
 
-ToastClose.displayName = ToastPrimitives.Close.displayName;
+ToastClose.displayName = ToastPrimitive.Close.displayName;
 
 //
 
-type ToastTitleProps = ComponentPropsWithoutRef<typeof ToastPrimitives.ToastTitle>;
-type ToastTitleElement = ElementRef<typeof ToastPrimitives.ToastTitle>;
+type ToastTitleProps = ComponentPropsWithoutRef<typeof ToastPrimitive.ToastTitle>;
+type ToastTitleElement = ElementRef<typeof ToastPrimitive.ToastTitle>;
 
 export const ToastTitle = forwardRef<ToastTitleElement, ToastTitleProps>(function ToastTitle(
 	props,
@@ -136,7 +136,7 @@ export const ToastTitle = forwardRef<ToastTitleElement, ToastTitleProps>(functio
 	const { className, ...rest } = props;
 
 	return (
-		<ToastPrimitives.Title
+		<ToastPrimitive.Title
 			ref={forwardedRef}
 			className={cn("text-sm font-semibold", className)}
 			{...rest}
@@ -144,19 +144,19 @@ export const ToastTitle = forwardRef<ToastTitleElement, ToastTitleProps>(functio
 	);
 });
 
-ToastTitle.displayName = ToastPrimitives.Title.displayName;
+ToastTitle.displayName = ToastPrimitive.Title.displayName;
 
 //
 
-type ToastDescriptionProps = ComponentPropsWithoutRef<typeof ToastPrimitives.ToastDescription>;
-type ToastDescriptionElement = ElementRef<typeof ToastPrimitives.ToastDescription>;
+type ToastDescriptionProps = ComponentPropsWithoutRef<typeof ToastPrimitive.ToastDescription>;
+type ToastDescriptionElement = ElementRef<typeof ToastPrimitive.ToastDescription>;
 
 export const ToastDescription = forwardRef<ToastDescriptionElement, ToastDescriptionProps>(
 	function ToastDescription(props, forwardedRef): JSX.Element {
 		const { className, ...rest } = props;
 
 		return (
-			<ToastPrimitives.Description
+			<ToastPrimitive.Description
 				ref={forwardedRef}
 				className={cn("text-sm opacity-90", className)}
 				{...rest}
@@ -165,4 +165,4 @@ export const ToastDescription = forwardRef<ToastDescriptionElement, ToastDescrip
 	},
 );
 
-ToastDescription.displayName = ToastPrimitives.Description.displayName;
+ToastDescription.displayName = ToastPrimitive.Description.displayName;

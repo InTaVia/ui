@@ -19,7 +19,7 @@ export const Default: Story = {
 	render(args) {
 		return (
 			<IconButton {...args}>
-				<Trash2Icon className="h-5 w-5 shrink-0" />
+				<Trash2Icon aria-hidden="true" className="h-5 w-5 shrink-0" />
 			</IconButton>
 		);
 	},

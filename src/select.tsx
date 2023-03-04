@@ -33,7 +33,7 @@ export const SelectTrigger = forwardRef<SelectTriggerElement, SelectTriggerProps
 				{...rest}
 			>
 				{children}
-				<ChevronDownIcon className="h-4 w-4 opacity-50" />
+				<ChevronDownIcon aria-hidden="true" className="h-4 w-4 opacity-50" />
 			</SelectPrimitive.Trigger>
 		);
 	},
@@ -122,7 +122,7 @@ export const SelectItem = forwardRef<SelectItemElement, SelectItemProps>(functio
 		>
 			<span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
 				<SelectPrimitive.ItemIndicator>
-					<CheckIcon className="h-4 w-4" />
+					<CheckIcon aria-hidden="true" className="h-4 w-4" />
 				</SelectPrimitive.ItemIndicator>
 			</span>
 

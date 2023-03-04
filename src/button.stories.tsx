@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Loader2Icon } from "lucide-react";
 
 import { Button } from "@/button";
+import { LoadingIndicator } from "@/loading-indicator";
 
 const meta = {
 	title: "Components/Button",
@@ -26,7 +26,7 @@ export const Loading: Story = {
 	render(args) {
 		return (
 			<Button {...args}>
-				<Loader2Icon className="h-4 w-4 shrink-0 animate-spin" />
+				<LoadingIndicator size="sm" />
 				Please wait
 			</Button>
 		);

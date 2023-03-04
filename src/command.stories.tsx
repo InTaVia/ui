@@ -69,32 +69,32 @@ export const Default: Story = {
 					<CommandEmpty>No results found.</CommandEmpty>
 					<CommandGroup heading="Suggestions">
 						<CommandItem>
-							<CalendarIcon className="mr-2 h-4 w-4" />
+							<CalendarIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 							<span>Calendar</span>
 						</CommandItem>
 						<CommandItem>
-							<SmileIcon className="mr-2 h-4 w-4" />
+							<SmileIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 							<span>Search Emoji</span>
 						</CommandItem>
 						<CommandItem>
-							<CalculatorIcon className="mr-2 h-4 w-4" />
+							<CalculatorIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 							<span>Calculator</span>
 						</CommandItem>
 					</CommandGroup>
 					<CommandSeparator />
 					<CommandGroup heading="Settings">
 						<CommandItem>
-							<UserIcon className="mr-2 h-4 w-4" />
+							<UserIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 							<span>Profile</span>
 							<CommandShortcut>⌘P</CommandShortcut>
 						</CommandItem>
 						<CommandItem>
-							<CreditCardIcon className="mr-2 h-4 w-4" />
+							<CreditCardIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 							<span>Billing</span>
 							<CommandShortcut>⌘B</CommandShortcut>
 						</CommandItem>
 						<CommandItem>
-							<SettingsIcon className="mr-2 h-4 w-4" />
+							<SettingsIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 							<span>Settings</span>
 							<CommandShortcut>⌘S</CommandShortcut>
 						</CommandItem>
@@ -141,17 +141,17 @@ export const CommandDropdownMenu: Story = {
 						<DropdownMenuLabel>Actions</DropdownMenuLabel>
 						<DropdownMenuGroup>
 							<DropdownMenuItem>
-								<UserIcon className="mr-2 h-4 w-4" />
+								<UserIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 								Assign to...
 							</DropdownMenuItem>
 							<DropdownMenuItem>
-								<CalendarIcon className="mr-2 h-4 w-4" />
+								<CalendarIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 								Set due date...
 							</DropdownMenuItem>
 							<DropdownMenuSeparator />
 							<DropdownMenuSub>
 								<DropdownMenuSubTrigger>
-									<TagsIcon className="mr-2 h-4 w-4" />
+									<TagsIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 									Apply label
 								</DropdownMenuSubTrigger>
 								<DropdownMenuSubContent className="p-0">
@@ -180,7 +180,7 @@ export const CommandDropdownMenu: Story = {
 							</DropdownMenuSub>
 							<DropdownMenuSeparator />
 							<DropdownMenuItem className="text-red-600">
-								<TrashIcon className="mr-2 h-4 w-4" />
+								<TrashIcon aria-hidden="true" className="mr-2 h-4 w-4" />
 								Delete
 								<DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
 							</DropdownMenuItem>
@@ -242,7 +242,7 @@ export const CommandPopover: Story = {
 						<Button variant="outline" size="sm" className="w-[120px] justify-start">
 							{selectedStatus ? (
 								<Fragment>
-									<selectedStatus.icon className="mr-2 h-4 w-4 shrink-0" />
+									<selectedStatus.icon aria-hidden="true" className="mr-2 h-4 w-4 shrink-0" />
 									{selectedStatus.label}
 								</Fragment>
 							) : (
@@ -270,6 +270,7 @@ export const CommandPopover: Story = {
 												}}
 											>
 												<status.icon
+													aria-hidden="true"
 													className={cn(
 														"mr-2 h-4 w-4",
 														status.value === selectedStatus?.value ? "opacity-100" : "opacity-40",
@@ -334,7 +335,7 @@ export const ComboBox: Story = {
 									return framework.value === value;
 							  })?.label
 							: "Select framework..."}
-						<ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+						<ChevronsUpDownIcon aria-hidden="true" className="ml-2 h-4 w-4 shrink-0 opacity-50" />
 					</Button>
 				</PopoverTrigger>
 				<PopoverContent className="w-[200px] p-0">
@@ -352,6 +353,7 @@ export const ComboBox: Story = {
 										}}
 									>
 										<CheckIcon
+											aria-hidden="true"
 											className={cn(
 												"mr-2 h-4 w-4",
 												value === framework.value ? "opacity-100" : "opacity-0",

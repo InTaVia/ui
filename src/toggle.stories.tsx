@@ -19,7 +19,7 @@ export const Default: Story = {
 	render(args) {
 		return (
 			<Toggle {...args}>
-				<ItalicIcon className="h-4 w-4" />
+				<ItalicIcon aria-hidden="true" className="h-4 w-4" />
 			</Toggle>
 		);
 	},

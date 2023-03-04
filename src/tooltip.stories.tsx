@@ -26,7 +26,7 @@ export const Default: Story = {
 			<Tooltip {...args}>
 				<TooltipTrigger asChild>
 					<Button variant="outline" className="w-10 rounded-full p-0">
-						<PlusIcon className="h-4 w-4" />
+						<PlusIcon aria-hidden="true" className="h-4 w-4" />
 						<span className="sr-only">Add</span>
 					</Button>
 				</TooltipTrigger>

@@ -27,6 +27,7 @@
 	"stylelint.enable": true,
 	"stylelint.snippet": ["css", "postcss"],
 	"stylelint.validate": ["css", "postcss"],
+	"tailwindCSS.experimental.classRegex": [["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]],
 	"tailwindCSS.validate": true,
 	"terminal.integrated.enablePersistentSessions": false,
 	"typescript.enablePromptUseWorkspaceTsdk": true,

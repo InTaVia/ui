@@ -14,7 +14,7 @@ const loaderVariants = cva("shrink-0 animate-spin", {
 	},
 	defaultVariants: {
 		size: "default",
-	},
+	} as const,
 });
 
 type LoadingIndicatorProps = LucideProps &

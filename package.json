@@ -141,6 +141,10 @@
 		],
 		"settings": {
 			"tailwindcss": {
+				"callees": [
+					"cn",
+					"cva"
+				],
 				"config": "./tailwind.config.cjs"
 			}
 		},

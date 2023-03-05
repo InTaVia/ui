@@ -16,7 +16,7 @@ const portalVariants = cva("fixed inset-0 z-50 flex", {
 	},
 	defaultVariants: {
 		position: "right",
-	},
+	} as const,
 });
 
 const dialogVariants = cva(
@@ -24,10 +24,10 @@ const dialogVariants = cva(
 	{
 		variants: {
 			position: {
-				top: "animate-in slide-in-from-top w-full duration-300",
-				bottom: "animate-in slide-in-from-bottom w-full duration-300",
-				left: "animate-in slide-in-from-left h-full duration-300",
-				right: "animate-in slide-in-from-right h-full duration-300",
+				top: "w-full animate-in slide-in-from-top duration-300",
+				bottom: "w-full animate-in slide-in-from-bottom duration-300",
+				left: "h-full animate-in slide-in-from-left duration-300",
+				right: "h-full animate-in slide-in-from-right duration-300",
 			},
 			size: {
 				content: "",
@@ -40,70 +40,70 @@ const dialogVariants = cva(
 		},
 		compoundVariants: [
 			{
-				position: ["top", "bottom"],
-				size: "content",
+				position: ["top", "bottom"] as ["top", "bottom"],
+				size: "content" as const,
 				class: "max-h-screen",
 			},
 			{
-				position: ["top", "bottom"],
-				size: "default",
+				position: ["top", "bottom"] as ["top", "bottom"],
+				size: "default" as const,
 				class: "h-1/3",
 			},
 			{
-				position: ["top", "bottom"],
-				size: "sm",
+				position: ["top", "bottom"] as ["top", "bottom"],
+				size: "sm" as const,
 				class: "h-1/4",
 			},
 			{
-				position: ["top", "bottom"],
-				size: "lg",
+				position: ["top", "bottom"] as ["top", "bottom"],
+				size: "lg" as const,
 				class: "h-1/2",
 			},
 			{
-				position: ["top", "bottom"],
-				size: "xl",
+				position: ["top", "bottom"] as ["top", "bottom"],
+				size: "xl" as const,
 				class: "h-5/6",
 			},
 			{
-				position: ["top", "bottom"],
-				size: "full",
+				position: ["top", "bottom"] as ["top", "bottom"],
+				size: "full" as const,
 				class: "h-screen",
 			},
 			{
-				position: ["right", "left"],
-				size: "content",
+				position: ["right", "left"] as ["right", "left"],
+				size: "content" as const,
 				class: "max-w-screen",
 			},
 			{
-				position: ["right", "left"],
-				size: "default",
+				position: ["right", "left"] as ["right", "left"],
+				size: "default" as const,
 				class: "w-1/3",
 			},
 			{
-				position: ["right", "left"],
-				size: "sm",
+				position: ["right", "left"] as ["right", "left"],
+				size: "sm" as const,
 				class: "w-1/4",
 			},
 			{
-				position: ["right", "left"],
-				size: "lg",
+				position: ["right", "left"] as ["right", "left"],
+				size: "lg" as const,
 				class: "w-1/2",
 			},
 			{
-				position: ["right", "left"],
-				size: "xl",
+				position: ["right", "left"] as ["right", "left"],
+				size: "xl" as const,
 				class: "w-5/6",
 			},
 			{
-				position: ["right", "left"],
-				size: "full",
+				position: ["right", "left"] as ["right", "left"],
+				size: "full" as const,
 				class: "w-screen",
 			},
 		],
 		defaultVariants: {
 			position: "right",
 			size: "default",
-		},
+		} as const,
 	},
 );
 

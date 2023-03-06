@@ -62,7 +62,7 @@ export const DialogContent = forwardRef<DialogContentElement, DialogContentProps
 					<DialogPrimitive.Content
 						ref={forwardedRef}
 						className={cn(
-							"grid max-h-full w-full gap-4 overflow-y-auto rounded-b-lg bg-white p-6 animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 dark:bg-neutral-900 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0",
+							"relative grid max-h-full w-full gap-4 overflow-y-auto rounded-b-lg bg-white p-6 animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 dark:bg-neutral-900 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0",
 							className,
 						)}
 						{...rest}

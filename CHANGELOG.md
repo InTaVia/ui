@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.17
+
+### Patch Changes
+
+- [`2fbcf28`](https://github.com/InTaVia/ui/commit/2fbcf28677bcd7e2bab8dd22c016180f607902fd) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add missing export for loading indicator
+
 ## 0.1.16
 
 ### Patch Changes

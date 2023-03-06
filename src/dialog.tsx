@@ -58,7 +58,7 @@ export const DialogContent = forwardRef<DialogContentElement, DialogContentProps
 		return (
 			<DialogPortal>
 				<DialogOverlay />
-				<div className="fixed inset-0 z-50 m-8 grid items-start justify-center sm:items-center">
+				<div className="fixed inset-0 z-50 m-8 grid items-start justify-items-center sm:items-center">
 					<DialogPrimitive.Content
 						ref={forwardedRef}
 						className={cn(

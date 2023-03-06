@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.19
+
+### Patch Changes
+
+- [`6a46252`](https://github.com/InTaVia/ui/commit/6a46252024bd20881f3efcbcb3e40263628715be) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - fix dialog width
+
 ## 0.1.18
 
 ### Patch Changes

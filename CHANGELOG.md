@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.20
+
+### Patch Changes
+
+- [`d947fa6`](https://github.com/InTaVia/ui/commit/d947fa659ffda9ed616c64178cf737add5100b9b) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - fix dialog close button position
+
 ## 0.1.19
 
 ### Patch Changes

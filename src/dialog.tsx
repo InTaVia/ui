@@ -17,13 +17,7 @@ type DialogPortalProps = DialogPrimitive.DialogPortalProps;
 export function DialogPortal(props: DialogPortalProps): JSX.Element {
 	const { children, ...rest } = props;
 
-	return (
-		<DialogPrimitive.Portal {...rest}>
-			<div className="fixed inset-0 z-50 flex items-start justify-center sm:items-center">
-				{children}
-			</div>
-		</DialogPrimitive.Portal>
-	);
+	return <DialogPrimitive.Portal {...rest}>{children}</DialogPrimitive.Portal>;
 }
 
 DialogPortal.displayName = DialogPrimitive.Portal.displayName;
@@ -64,20 +58,22 @@ export const DialogContent = forwardRef<DialogContentElement, DialogContentProps
 		return (
 			<DialogPortal>
 				<DialogOverlay />
-				<DialogPrimitive.Content
-					ref={forwardedRef}
-					className={cn(
-						"fixed z-50 grid w-full gap-4 rounded-b-lg bg-white p-6 animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0 dark:bg-neutral-900",
-						className,
-					)}
-					{...rest}
-				>
-					{children}
-					<DialogPrimitive.Close className="absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-neutral-100 dark:focus:ring-neutral-400 dark:focus:ring-offset-neutral-900 dark:data-[state=open]:bg-neutral-800">
-						<XIcon aria-hidden="true" className="h-4 w-4" />
-						<span className="sr-only">Close</span>
-					</DialogPrimitive.Close>
-				</DialogPrimitive.Content>
+				<div className="fixed inset-0 z-50 m-8 grid items-start justify-center sm:items-center">
+					<DialogPrimitive.Content
+						ref={forwardedRef}
+						className={cn(
+							"grid max-h-full w-full gap-4 overflow-y-auto rounded-b-lg bg-white p-6 animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 dark:bg-neutral-900 sm:max-w-lg sm:rounded-lg sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0",
+							className,
+						)}
+						{...rest}
+					>
+						{children}
+						<DialogPrimitive.Close className="absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-neutral-100 dark:focus:ring-neutral-400 dark:focus:ring-offset-neutral-900 dark:data-[state=open]:bg-neutral-800">
+							<XIcon aria-hidden="true" className="h-4 w-4" />
+							<span className="sr-only">Close</span>
+						</DialogPrimitive.Close>
+					</DialogPrimitive.Content>
+				</div>
 			</DialogPortal>
 		);
 	},

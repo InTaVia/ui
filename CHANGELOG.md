@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.18
+
+### Patch Changes
+
+- [`2368bc4`](https://github.com/InTaVia/ui/commit/2368bc4af225f343141d5e2333eab24b05aaec04) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - fix dialog overflow
+
 ## 0.1.17
 
 ### Patch Changes

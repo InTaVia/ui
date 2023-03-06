@@ -11,6 +11,10 @@ export const PopoverTrigger = PopoverPrimitive.Trigger;
 
 //
 
+export const PopoverCloseButton = PopoverPrimitive.Close;
+
+//
+
 type PopoverContentProps = ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>;
 type PopoverContentElement = ElementRef<typeof PopoverPrimitive.Content>;
 

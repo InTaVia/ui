@@ -12,6 +12,10 @@ export const DialogTrigger = DialogPrimitive.Trigger;
 
 //
 
+export const DialogCloseButton = DialogPrimitive.Close;
+
+//
+
 type DialogPortalProps = DialogPrimitive.DialogPortalProps;
 
 export function DialogPortal(props: DialogPortalProps): JSX.Element {

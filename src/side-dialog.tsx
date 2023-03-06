@@ -117,6 +117,10 @@ export const SideDialogTrigger = DialogPrimitive.Trigger;
 
 //
 
+export const SideDialogCloseButton = DialogPrimitive.Close;
+
+//
+
 type SideDialogPortalProps = ComponentPropsWithoutRef<typeof DialogPrimitive.Portal> &
 	VariantProps<typeof portalVariants>;
 

@@ -15,6 +15,7 @@ export * from "@/icon-button";
 export * from "@/input";
 export * from "@/label";
 export { cn } from "@/lib/cn";
+export * from "@/loading-indicator";
 export * from "@/menu-bar";
 export * from "@/navigation-menu";
 export * from "@/panel-group";

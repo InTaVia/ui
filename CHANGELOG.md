@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.21
+
+### Patch Changes
+
+- [`ff51cc1`](https://github.com/InTaVia/ui/commit/ff51cc1c5c411259e0df92f7d685ddb57aa20937) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - expose close buttons for dialog and popover
+
 ## 0.1.20
 
 ### Patch Changes

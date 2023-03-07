@@ -10,6 +10,7 @@ export * from "@/command";
 export * from "@/context-menu";
 export * from "@/dialog";
 export * from "@/dropdown-menu";
+export * from "@/file-input";
 export * from "@/hover-card";
 export * from "@/icon-button";
 export * from "@/input";

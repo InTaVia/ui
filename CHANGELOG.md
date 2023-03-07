@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.22
+
+### Patch Changes
+
+- [`7434d06`](https://github.com/InTaVia/ui/commit/7434d065ef31c8af09f736a01275c255b748a815) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add file input
+
 ## 0.1.21
 
 ### Patch Changes

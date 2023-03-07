@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.23
+
+### Patch Changes
+
+- [`5357257`](https://github.com/InTaVia/ui/commit/535725733133fd666b0a869ad4101cae530f3d8f) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - add xs button size
+
 ## 0.1.22
 
 ### Patch Changes

@@ -19,8 +19,7 @@ export function PanelResizeHandle(props: PanelResizeHandleProps): JSX.Element {
 	return (
 		<PanelPrimitive.PanelResizeHandle
 			className={cn(
-				"bg-transparent transition relative shrink-0 grow-0 hover:bg-neutral-200 data-[resize-handle-active]:bg-neutral-500 data-[panel-group-direction=horizontal]:w-2 data-[panel-group-direction=vertical]:h-2",
-				"dark:hover:bg-neutral-600 dark:data-[resize-handle-active]:bg-neutral-300",
+				"relative shrink-0 grow-0 bg-transparent transition hover:bg-neutral-200 data-[panel-group-direction=vertical]:h-2 data-[panel-group-direction=horizontal]:w-2 data-[resize-handle-active]:bg-neutral-500 dark:hover:bg-neutral-600 dark:data-[resize-handle-active]:bg-neutral-300",
 				className,
 			)}
 			{...rest}

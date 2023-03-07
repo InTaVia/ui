@@ -15,7 +15,7 @@ export const IconButton = forwardRef<IconButtonElement, IconButtonProps>(functio
 	return (
 		<Button
 			ref={forwardedRef}
-			className={cn("p-2 aspect-square", className)}
+			className={cn("aspect-square p-2", className)}
 			title={label}
 			{...rest}
 		>
@@ -24,3 +24,5 @@ export const IconButton = forwardRef<IconButtonElement, IconButtonProps>(functio
 		</Button>
 	);
 });
+
+IconButton.displayName = "IconButton";

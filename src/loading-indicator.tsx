@@ -41,3 +41,5 @@ export const LoadingIndicator = forwardRef<LoadingIndicatorElement, LoadingIndic
 		);
 	},
 );
+
+LoadingIndicator.displayName = "LoadingIndicator";

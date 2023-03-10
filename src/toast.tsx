@@ -11,7 +11,8 @@ const toastVariants = cva(
 		variants: {
 			variant: {
 				default: "border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-800",
-				destructive: "group border-red-600 bg-red-600 text-white dark:border-red-600",
+				/** The `destructuve` class is so we can easily target the `group-[.destructive]`. */
+				destructive: "destructive group border-red-600 bg-red-600 text-white dark:border-red-600",
 			},
 		},
 		defaultVariants: {
@@ -111,7 +112,7 @@ export const ToastClose = forwardRef<ToastCloseElement, ToastCloseProps>(functio
 		<ToastPrimitive.Close
 			ref={forwardedRef}
 			className={cn(
-				"absolute top-2 right-2 rounded-md p-1 text-neutral-500 opacity-0 transition-opacity hover:text-neutral-900 focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600 dark:hover:text-neutral-50",
+				"absolute top-2 right-2 rounded-md p-1 text-neutral-500 opacity-0 transition hover:text-neutral-900 focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600 dark:hover:text-neutral-50",
 				className,
 			)}
 			toast-close=""

@@ -21,13 +21,13 @@ export const Default: Story = {
 		return (
 			<Fragment>
 				<Toaster />
-				<ToastStory />
+				<DefaultToastStory />
 			</Fragment>
 		);
 	},
 };
 
-function ToastStory(): JSX.Element {
+function DefaultToastStory(): JSX.Element {
 	const { toast } = useToast();
 
 	return (
@@ -42,6 +42,38 @@ function ToastStory(): JSX.Element {
 			}}
 		>
 			Add to calendar
+		</Button>
+	);
+}
+
+export const Destructive: Story = {
+	args: {},
+	render(_args) {
+		return (
+			<Fragment>
+				<Toaster />
+				<DestructiveToastStory />
+			</Fragment>
+		);
+	},
+};
+
+function DestructiveToastStory(): JSX.Element {
+	const { toast } = useToast();
+
+	return (
+		<Button
+			variant="destructive"
+			onClick={() => {
+				toast({
+					title: "Delete entry",
+					description: "Entry has been successfully deleted",
+					action: <ToastAction altText="Undo delete">Undo</ToastAction>,
+					variant: "destructive",
+				});
+			}}
+		>
+			Delete entry
 		</Button>
 	);
 }

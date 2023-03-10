@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.24
+
+### Patch Changes
+
+- [`256aa21`](https://github.com/InTaVia/ui/commit/256aa218e9c684e4ff1f004375dc9b352ce30ae9) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - fix close button styles on destructive toasts
+
 ## 0.1.23
 
 ### Patch Changes

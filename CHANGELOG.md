@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.1.25
+
+### Patch Changes
+
+- [`6d2b6e7`](https://github.com/InTaVia/ui/commit/6d2b6e7a253722cf7a882416901bc5e8f3e7a240) Thanks
+  [@stefanprobst](https://github.com/stefanprobst)! - fix style for popover button open state
+
 ## 0.1.24
 
 ### Patch Changes

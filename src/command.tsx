@@ -3,8 +3,8 @@ import { Command as CommandPrimitive, useCommandState } from "cmdk";
 import { SearchIcon } from "lucide-react";
 import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
-import { Dialog, DialogContent } from "@/dialog";
-import { cn } from "@/lib/cn";
+import { Dialog, DialogContent } from "@/dialog.js";
+import { cn } from "@/lib/cn.js";
 
 type CommandProps = ComponentPropsWithoutRef<typeof CommandPrimitive>;
 type CommandElement = ElementRef<typeof CommandPrimitive>;

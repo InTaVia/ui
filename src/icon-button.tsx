@@ -1,7 +1,7 @@
 import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
-import { Button } from "@/button";
-import { cn } from "@/lib/cn";
+import { Button } from "@/button.js";
+import { cn } from "@/lib/cn.js";
 
 type IconButtonProps = ComponentPropsWithoutRef<typeof Button> & { label: string };
 type IconButtonElement = ElementRef<typeof Button>;

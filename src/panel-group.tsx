@@ -1,7 +1,7 @@
 import { type ComponentPropsWithoutRef } from "react";
 import * as PanelPrimitive from "react-resizable-panels";
 
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/cn.js";
 
 export const PanelGroup = PanelPrimitive.PanelGroup;
 

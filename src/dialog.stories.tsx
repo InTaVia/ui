@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 
-import { Button } from "@/button";
+import { Button } from "@/button.js";
 import {
 	Dialog,
 	DialogContent,
@@ -9,9 +9,9 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@/dialog";
-import { Input } from "@/input";
-import { Label } from "@/label";
+} from "@/dialog.js";
+import { Input } from "@/input.js";
+import { Label } from "@/label.js";
 
 const meta = {
 	title: "Components/Dialog",

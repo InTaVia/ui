@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 
-import { LoadingIndicator } from "@/loading-indicator";
+import { LoadingIndicator } from "@/loading-indicator.js";
 
 const meta = {
 	title: "Components/LoadingIndicator",

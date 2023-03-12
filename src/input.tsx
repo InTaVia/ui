@@ -1,6 +1,6 @@
 import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/cn.js";
 
 type InputProps = ComponentPropsWithoutRef<"input">;
 type InputElement = ElementRef<"input">;

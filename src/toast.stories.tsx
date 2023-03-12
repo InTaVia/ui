@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Fragment } from "react";
 
-import { Button } from "@/button";
-import { Toast, ToastAction } from "@/toast";
-import { Toaster } from "@/toaster";
-import { useToast } from "@/use-toast";
+import { Button } from "@/button.js";
+import { Toast, ToastAction } from "@/toast.js";
+import { Toaster } from "@/toaster.js";
+import { useToast } from "@/use-toast.js";
 
 const meta = {
 	title: "Components/Toast",

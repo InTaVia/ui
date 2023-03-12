@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 
 import {
 	MenuBar,
@@ -14,7 +14,7 @@ import {
 	MenuBarSubContent,
 	MenuBarSubTrigger,
 	MenuBarTrigger,
-} from "@/menu-bar";
+} from "@/menu-bar.js";
 
 const meta = {
 	title: "Components/MenuBar",

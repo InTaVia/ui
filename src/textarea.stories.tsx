@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 
-import { Label } from "@/label";
-import { Textarea } from "@/textarea";
+import { Label } from "@/label.js";
+import { Textarea } from "@/textarea.js";
 
 const meta = {
 	title: "Components/Textarea",

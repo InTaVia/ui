@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 
 import {
 	ContextMenu,
@@ -14,7 +14,7 @@ import {
 	ContextMenuSubContent,
 	ContextMenuSubTrigger,
 	ContextMenuTrigger,
-} from "@/context-menu";
+} from "@/context-menu.js";
 
 const meta = {
 	title: "Components/ContextMenu",

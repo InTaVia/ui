@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 
-import { Button } from "@/button";
-import { Input } from "@/input";
-import { Label } from "@/label";
+import { Button } from "@/button.js";
+import { Input } from "@/input.js";
+import { Label } from "@/label.js";
 import {
 	SideDialog,
 	SideDialogContent,
@@ -11,7 +11,7 @@ import {
 	SideDialogHeader,
 	SideDialogTitle,
 	SideDialogTrigger,
-} from "@/side-dialog";
+} from "@/side-dialog.js";
 
 const meta = {
 	title: "Components/SideDialog",

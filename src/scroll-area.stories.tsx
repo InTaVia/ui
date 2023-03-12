@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Fragment } from "react";
 
-import { ScrollArea } from "@/scroll-area";
-import { Separator } from "@/separator";
+import { ScrollArea } from "@/scroll-area.js";
+import { Separator } from "@/separator.js";
 
 const meta = {
 	title: "Components/ScrollArea",

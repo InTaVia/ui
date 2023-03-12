@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { PlusIcon } from "lucide-react";
 
-import { Button } from "@/button";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/tooltip";
+import { Button } from "@/button.js";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/tooltip.js";
 
 const meta = {
 	title: "Components/Tooltip",

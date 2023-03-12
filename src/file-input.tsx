@@ -6,8 +6,8 @@ import {
 	forwardRef,
 } from "react";
 
-import { buttonVariants } from "@/button";
-import { cn } from "@/lib/cn";
+import { buttonVariants } from "@/button.js";
+import { cn } from "@/lib/cn.js";
 
 type FileInputProps = ComponentPropsWithoutRef<"input"> & {
 	onValueChange?: (files: FileList | null) => void;

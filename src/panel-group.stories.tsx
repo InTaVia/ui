@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 
-import { Panel, PanelGroup, PanelResizeHandle } from "@/panel-group";
+import { Panel, PanelGroup, PanelResizeHandle } from "@/panel-group.js";
 
 const meta = {
 	title: "Components/PanelGroup",

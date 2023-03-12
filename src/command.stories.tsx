@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import {
 	type LucideIcon,
 	ArrowUpCircleIcon,
@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { Fragment, useState } from "react";
 
-import { Button } from "@/button";
+import { Button } from "@/button.js";
 import {
 	Command,
 	CommandEmpty,
@@ -30,7 +30,7 @@ import {
 	CommandList,
 	CommandSeparator,
 	CommandShortcut,
-} from "@/command";
+} from "@/command.js";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -43,9 +43,9 @@ import {
 	DropdownMenuSubContent,
 	DropdownMenuSubTrigger,
 	DropdownMenuTrigger,
-} from "@/dropdown-menu";
-import { cn } from "@/lib/cn";
-import { Popover, PopoverContent, PopoverTrigger } from "@/popover";
+} from "@/dropdown-menu.js";
+import { cn } from "@/lib/cn.js";
+import { Popover, PopoverContent, PopoverTrigger } from "@/popover.js";
 
 const meta = {
 	title: "Components/Command",

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import {
 	CloudIcon,
 	CreditCardIcon,
@@ -16,7 +16,7 @@ import {
 	UsersIcon,
 } from "lucide-react";
 
-import { Button } from "@/button";
+import { Button } from "@/button.js";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -30,7 +30,7 @@ import {
 	DropdownMenuSubContent,
 	DropdownMenuSubTrigger,
 	DropdownMenuTrigger,
-} from "@/dropdown-menu";
+} from "@/dropdown-menu.js";
 
 const meta = {
 	title: "Components/DropdownMenu",

@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Settings2Icon as SettingsIcon } from "lucide-react";
 
-import { Button } from "@/button";
-import { Input } from "@/input";
-import { Label } from "@/label";
-import { Popover, PopoverContent, PopoverTrigger } from "@/popover";
+import { Button } from "@/button.js";
+import { Input } from "@/input.js";
+import { Label } from "@/label.js";
+import { Popover, PopoverContent, PopoverTrigger } from "@/popover.js";
 
 const meta = {
 	title: "Components/Popover",

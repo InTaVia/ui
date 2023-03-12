@@ -8,7 +8,7 @@ import {
 	useState,
 } from "react";
 
-import { type Toast, type ToastAction } from "@/toast";
+import { type Toast, type ToastAction } from "@/toast.js";
 
 type ToastProps = ComponentPropsWithoutRef<typeof Toast>;
 

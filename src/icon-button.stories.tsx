@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Trash2Icon } from "lucide-react";
 
-import { IconButton } from "@/icon-button";
+import { IconButton } from "@/icon-button.js";
 
 const meta = {
 	title: "Components/IconButton",

@@ -2,17 +2,24 @@
 	"name": "@intavia/ui",
 	"version": "0.1.25",
 	"license": "MIT",
-	"types": "./dist/index.d.ts",
-	"main": "./dist/index.js",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./dist/index.js"
+		},
+		"./tailwind-preset": {
+			"default": "./dist/tailwind-preset.config.cjs"
+		}
+	},
 	"files": [
 		"dist"
 	],
+	"sideEffects": false,
 	"engines": {
 		"node": "18.x",
 		"pnpm": "7.x"
 	},
 	"packageManager": "pnpm@7.27.1",
-	"sideEffects": false,
 	"scripts": {
 		"build": "tsup ./src/index.tsx && cp ./src/tailwind-preset/* ./dist/",
 		"changeset:add": "changeset add",
@@ -88,7 +95,7 @@
 		"@stefanprobst/eslint-config-storybook": "^1.0.1",
 		"@stefanprobst/prettier-config": "^3.0.0",
 		"@stefanprobst/stylelint-config": "^3.0.1",
-		"@stefanprobst/tsconfig": "^2.2.2",
+		"@stefanprobst/tsconfig-lib": "^1.0.1",
 		"@storybook/addon-a11y": "^7.0.0-rc.1",
 		"@storybook/addon-essentials": "^7.0.0-rc.1",
 		"@storybook/addon-interactions": "^7.0.0-rc.1",
@@ -114,7 +121,7 @@
 		"storybook": "^7.0.0-rc.1",
 		"stylelint": "^15.2.0",
 		"tsup": "^6.6.3",
-		"typescript": "^4.9.5",
+		"typescript": "^5.0.1-rc",
 		"vite": "^4.1.4",
 		"vite-tsconfig-paths": "^4.0.5"
 	},
@@ -192,7 +199,6 @@
 		"clean": true,
 		"dts": true,
 		"format": [
-			"cjs",
 			"esm"
 		],
 		"minify": true,

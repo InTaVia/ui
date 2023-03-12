@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
 
-import { Button } from "@/button";
+import { Button } from "@/button.js";
 import {
 	ComboBox,
 	ComboBoxButton,
@@ -10,8 +10,8 @@ import {
 	ComboBoxInput,
 	ComboBoxItem,
 	ComboBoxTrigger,
-} from "@/combobox";
-import { Dialog, DialogContent, DialogTrigger } from "@/dialog";
+} from "@/combobox.js";
+import { Dialog, DialogContent, DialogTrigger } from "@/dialog.js";
 
 const meta = {
 	title: "Components/ComboBox",

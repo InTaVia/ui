@@ -19,7 +19,7 @@ import {
 	Fragment,
 } from "react";
 
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/cn.js";
 
 const usePopperScope = createPopperScope();
 const __scopeComboBox = { __scopeComboBox: [] };

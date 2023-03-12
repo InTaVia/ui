@@ -3,7 +3,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { XIcon } from "lucide-react";
 import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/cn.js";
 
 const portalVariants = cva("fixed inset-0 z-50 flex", {
 	variants: {

@@ -70,7 +70,7 @@ export const NavigationMenuTrigger = forwardRef<
 		<NavigationMenuPrimitive.Trigger
 			ref={forwardedRef}
 			className={cn(
-				"inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:bg-neutral-100 disabled:opacity-50 dark:focus:bg-neutral-800 disabled:pointer-events-none bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:text-neutral-100 dark:hover:text-neutral-100 data-[state=open]:bg-neutral-50 dark:data-[state=open]:bg-neutral-800 data-[active]:bg-neutral-50 dark:data-[active]:bg-neutral-800 h-10 py-2 px-4 group w-max group",
+				"group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent py-2 px-4 text-sm font-medium transition-colors hover:bg-neutral-100 focus:bg-neutral-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-neutral-50 data-[active]:bg-neutral-50 dark:text-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-100 dark:focus:bg-neutral-800 dark:data-[state=open]:bg-neutral-800 dark:data-[active]:bg-neutral-800",
 				className,
 			)}
 			{...rest}

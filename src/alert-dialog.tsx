@@ -66,7 +66,7 @@ export const AlertDialogContent = forwardRef<AlertDialogContentElement, AlertDia
 				<AlertDialogPrimitive.Content
 					ref={forwardedRef}
 					className={cn(
-						"fixed z-50 grid w-full max-w-lg scale-100 gap-4 bg-white p-6 opacity-100 animate-in fade-in-90 slide-in-from-bottom-10 sm:rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0 md:w-full dark:bg-neutral-900",
+						"fixed z-50 grid w-full max-w-lg scale-100 gap-4 bg-white p-6 opacity-100 animate-in fade-in-90 slide-in-from-bottom-10 dark:bg-neutral-900 sm:rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0 md:w-full",
 						className,
 					)}
 					{...rest}

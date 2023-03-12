@@ -2,13 +2,14 @@ import "@fontsource/inter/variable-full.css";
 import "tailwindcss/tailwind.css";
 import "~/config/storybook/preview.css";
 
-import type { Decorator, Parameters as StorybookParameters } from "@storybook/react";
+import { type Decorator, type Parameters as StorybookParameters } from "@storybook/react";
+import { type GlobalTypes } from "@storybook/types";
 
 import { Main } from "@/decorators/main.decorator";
 
 export const decorators: Array<Decorator> = [Main];
 
-export const globalTypes = {
+export const globalTypes: GlobalTypes = {
 	colorScheme: {
 		name: "color-scheme",
 		description: "Toggle color scheme",

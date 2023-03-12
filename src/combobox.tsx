@@ -175,7 +175,7 @@ export const ComboBoxContent = forwardRef<ComboBoxContentElement, ComboBoxConten
 					ref={forwardedRef}
 					className={cn(
 						"mt-1",
-						"relative overflow-y-auto z-50 min-w-[8rem] overflow-x-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400",
+						"relative z-50 min-w-[8rem] overflow-y-auto overflow-x-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400",
 						className,
 					)}
 					style={{
@@ -208,7 +208,7 @@ export const ComboBoxItem = forwardRef<ComboBoxItemElement, ComboBoxItemProps>(
 			<Combobox.Option
 				ref={forwardedRef}
 				className={cn(
-					"relative flex cursor-default select-none items-center rounded-sm py-1.5 pr-2 pl-8 text-sm font-medium outline-none focus:bg-neutral-100 data-[headlessui-state~=active]:bg-neutral-100 data-[headlessui-state~=disabled]:pointer-events-none data-[headlessui-state~=disabled]:opacity-50 dark:focus:bg-neutral-700 dark:data-[headlessui-state~=active]:bg-neutral-700",
+					"relative flex cursor-default select-none items-center rounded-sm py-1.5 pr-2 pl-8 text-sm font-medium outline-none focus:bg-neutral-100 data-[headlessui-state~=disabled]:pointer-events-none data-[headlessui-state~=active]:bg-neutral-100 data-[headlessui-state~=disabled]:opacity-50 dark:focus:bg-neutral-700 dark:data-[headlessui-state~=active]:bg-neutral-700",
 					className,
 				)}
 				{...rest}

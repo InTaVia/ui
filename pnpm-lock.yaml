@@ -58,7 +58,6 @@ specifiers:
   eslint: ^8.34.0
   eslint-plugin-tailwindcss: ^3.9.0
   lint-staged: ^13.1.2
-  lucide-react: ^0.115.0
   npm-run-all: ^4.1.5
   postcss: ^8.4.21
   postcss-custom-media: ^9.1.2
@@ -111,7 +110,6 @@ dependencies:
   class-variance-authority: 0.4.0_typescript@5.0.1-rc
   clsx: 1.2.1
   cmdk: 0.1.22_zula6vjvt3wdocc4mwcxqa6nzi
-  lucide-react: 0.115.0_react@18.2.0
   react-resizable-panels: 0.0.36_biqbaboplfbrettd7655fr4n2y
   tailwind-merge: 1.10.0
   tailwindcss: 3.2.7_postcss@8.4.21
@@ -3740,7 +3738,7 @@ packages:
       '@storybook/csf-plugin': 7.0.0-rc.1
       '@storybook/csf-tools': 7.0.0-rc.1
       '@storybook/global': 5.0.0
-      '@storybook/mdx2-csf': 1.0.0-next.5
+      '@storybook/mdx2-csf': 1.0.0-next.6
       '@storybook/node-logger': 7.0.0-rc.1
       '@storybook/postinstall': 7.0.0-rc.1
       '@storybook/preview-api': 7.0.0-rc.1
@@ -4065,7 +4063,7 @@ packages:
       '@storybook/client-logger': 7.0.0-rc.1
       '@storybook/core-common': 7.0.0-rc.1
       '@storybook/csf-plugin': 7.0.0-rc.1
-      '@storybook/mdx2-csf': 1.0.0-next.5
+      '@storybook/mdx2-csf': 1.0.0-next.6
       '@storybook/node-logger': 7.0.0-rc.1
       '@storybook/preview': 7.0.0-rc.1
       '@storybook/preview-api': 7.0.0-rc.1
@@ -4431,8 +4429,8 @@ packages:
     resolution: {integrity: sha512-8mchcpaDBZJKMoCfb2+IF6/waOQLR/7Xeish3ff8TAGTE9tD2s+S3s/z3lCiEXnBiYeW1ZEUlK3F2NTNdHfH2Q==}
     dev: true
 
-  /@storybook/mdx2-csf/1.0.0-next.5:
-    resolution: {integrity: sha512-02w0sgGZaK1agT050yCVhJ+o4rLHANWvLKWjQjeAsYbjneLC5ITt+3GDB4jRiWwJboZ8dHW1fGSK1Vg5fA34aQ==}
+  /@storybook/mdx2-csf/1.0.0-next.6:
+    resolution: {integrity: sha512-m6plojocU/rmrqWd26yvm8D+oHZPZ6PtSSFmZIgpNDEPVmc8s4fBD6LXOAB5MiPI5f8KLUr2HVhOMZ97o5pDTw==}
     dev: true
 
   /@storybook/node-logger/7.0.0-rc.1:
@@ -8762,14 +8760,6 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
-
-  /lucide-react/0.115.0_react@18.2.0:
-    resolution: {integrity: sha512-VGL7jBKN6pEXi6peXoyn9t9O7olvinaAonnoe+iFi/F2q7/yQzAFM5KR1OY15u9PlrB3scI9HvcTFoOrIjUaVQ==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
-    dev: false
 
   /lz-string/1.4.4:
     resolution: {integrity: sha512-0ckx7ZHRPqb0oUm8zNr+90mtf9DQB60H1wMCjBtfi62Kl3a7JbHob6gA2bC+xRvZoOL+1hzUK8jeuEIQE8svEQ==}

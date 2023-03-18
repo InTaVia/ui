@@ -75,7 +75,6 @@
 		"class-variance-authority": "^0.4.0",
 		"clsx": "^1.2.1",
 		"cmdk": "^0.1.22",
-		"lucide-react": "^0.115.0",
 		"react-resizable-panels": "^0.0.36",
 		"tailwind-merge": "^1.10.0",
 		"tailwindcss": "^3.2.7",
@@ -201,6 +200,9 @@
 		"format": [
 			"esm"
 		],
+		"loader": {
+			".svg": "file"
+		},
 		"minify": true,
 		"sourcemap": true,
 		"treeshake": true

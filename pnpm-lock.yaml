@@ -37,6 +37,7 @@ specifiers:
   '@stefanprobst/eslint-config': ^1.0.10
   '@stefanprobst/eslint-config-react': ^1.0.4
   '@stefanprobst/eslint-config-storybook': ^1.0.1
+  '@stefanprobst/is-nonempty-string': ^1.0.1
   '@stefanprobst/prettier-config': ^3.0.0
   '@stefanprobst/stylelint-config': ^3.0.1
   '@stefanprobst/tsconfig-lib': ^1.0.1
@@ -106,6 +107,7 @@ dependencies:
   '@radix-ui/react-toast': 1.1.2_biqbaboplfbrettd7655fr4n2y
   '@radix-ui/react-toggle': 1.0.1_biqbaboplfbrettd7655fr4n2y
   '@radix-ui/react-tooltip': 1.0.3_zula6vjvt3wdocc4mwcxqa6nzi
+  '@stefanprobst/is-nonempty-string': 1.0.1
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.7
   class-variance-authority: 0.4.0_typescript@5.0.1-rc
   clsx: 1.2.1
@@ -3579,6 +3581,10 @@ packages:
       - eslint-import-resolver-webpack
       - supports-color
     dev: true
+
+  /@stefanprobst/is-nonempty-string/1.0.1:
+    resolution: {integrity: sha512-goAibS+rdsbNz9ZqLFVKS3lLSly7hHlFix0m7MCh7M5CXdBxpq5V3K3EnwI8Vps3oYxRU9f4NAf/jRYOIss0FA==}
+    dev: false
 
   /@stefanprobst/prettier-config/3.0.0_prettier@2.8.4:
     resolution: {integrity: sha512-jYeNZyE1DxtNZ7IN497xSlOcqxIdeTTiupZVK39X0isqfkHNwens7CYfMjaUgetfNorzqK7JFxbPTx9mJjsQZA==}

@@ -18,8 +18,6 @@ export const Icon = forwardRef(function Icon<T extends string>(
 		<svg
 			ref={forwardedRef}
 			aria-hidden={isNonEmptyString(props["aria-label"]) === false}
-			fill="currentColor"
-			stroke="currentColor"
 			width="1em"
 			{...rest}
 		>

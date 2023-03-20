@@ -1,23 +1,4 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import {
-	type LucideIcon,
-	ArrowUpCircleIcon,
-	CalculatorIcon,
-	CalendarIcon,
-	CheckCircle2Icon,
-	CheckIcon,
-	ChevronsUpDownIcon,
-	CircleIcon,
-	CreditCardIcon,
-	HelpCircleIcon,
-	MoreHorizontalIcon,
-	SettingsIcon,
-	SmileIcon,
-	TagsIcon,
-	TrashIcon,
-	UserIcon,
-	XCircleIcon,
-} from "lucide-react";
 import { Fragment, useState } from "react";
 
 import { Button } from "@/button.js";
@@ -46,6 +27,7 @@ import {
 } from "@/dropdown-menu.js";
 import { cn } from "@/lib/cn.js";
 import { Popover, PopoverContent, PopoverTrigger } from "@/popover.js";
+import { type symbols, Icon } from "@/storybook/icons.js";
 
 const meta = {
 	title: "Components/Command",
@@ -69,32 +51,32 @@ export const Default: Story = {
 					<CommandEmpty>No results found.</CommandEmpty>
 					<CommandGroup heading="Suggestions">
 						<CommandItem>
-							<CalendarIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+							<Icon icon="calendar-icon" className="mr-2 h-4 w-4" />
 							<span>Calendar</span>
 						</CommandItem>
 						<CommandItem>
-							<SmileIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+							<Icon icon="smile-icon" className="mr-2 h-4 w-4" />
 							<span>Search Emoji</span>
 						</CommandItem>
 						<CommandItem>
-							<CalculatorIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+							<Icon icon="calculator-icon" className="mr-2 h-4 w-4" />
 							<span>Calculator</span>
 						</CommandItem>
 					</CommandGroup>
 					<CommandSeparator />
 					<CommandGroup heading="Settings">
 						<CommandItem>
-							<UserIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+							<Icon icon="user-icon" className="mr-2 h-4 w-4" />
 							<span>Profile</span>
 							<CommandShortcut>⌘P</CommandShortcut>
 						</CommandItem>
 						<CommandItem>
-							<CreditCardIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+							<Icon icon="credit-card-icon" className="mr-2 h-4 w-4" />
 							<span>Billing</span>
 							<CommandShortcut>⌘B</CommandShortcut>
 						</CommandItem>
 						<CommandItem>
-							<SettingsIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+							<Icon icon="settings-icon" className="mr-2 h-4 w-4" />
 							<span>Settings</span>
 							<CommandShortcut>⌘S</CommandShortcut>
 						</CommandItem>
@@ -134,24 +116,24 @@ export const CommandDropdownMenu: Story = {
 				<DropdownMenu open={open} onOpenChange={setOpen}>
 					<DropdownMenuTrigger asChild>
 						<Button variant="ghost" size="sm">
-							<MoreHorizontalIcon />
+							<Icon icon="more-horizontal-icon" />
 						</Button>
 					</DropdownMenuTrigger>
 					<DropdownMenuContent align="end" className="w-[200px]">
 						<DropdownMenuLabel>Actions</DropdownMenuLabel>
 						<DropdownMenuGroup>
 							<DropdownMenuItem>
-								<UserIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+								<Icon icon="user-icon" className="mr-2 h-4 w-4" />
 								Assign to...
 							</DropdownMenuItem>
 							<DropdownMenuItem>
-								<CalendarIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+								<Icon icon="calendar-icon" className="mr-2 h-4 w-4" />
 								Set due date...
 							</DropdownMenuItem>
 							<DropdownMenuSeparator />
 							<DropdownMenuSub>
 								<DropdownMenuSubTrigger>
-									<TagsIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+									<Icon icon="tags-icon" className="mr-2 h-4 w-4" />
 									Apply label
 								</DropdownMenuSubTrigger>
 								<DropdownMenuSubContent className="p-0">
@@ -180,7 +162,7 @@ export const CommandDropdownMenu: Story = {
 							</DropdownMenuSub>
 							<DropdownMenuSeparator />
 							<DropdownMenuItem className="text-red-600">
-								<TrashIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+								<Icon icon="trash-icon" className="mr-2 h-4 w-4" />
 								Delete
 								<DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
 							</DropdownMenuItem>
@@ -198,34 +180,34 @@ export const CommandPopover: Story = {
 		type Status = {
 			value: string;
 			label: string;
-			icon: LucideIcon;
+			icon: keyof typeof symbols;
 		};
 
 		const statuses: Array<Status> = [
 			{
 				value: "backlog",
 				label: "Backlog",
-				icon: HelpCircleIcon,
+				icon: "help-circle-icon",
 			},
 			{
 				value: "todo",
 				label: "Todo",
-				icon: CircleIcon,
+				icon: "circle-icon",
 			},
 			{
 				value: "in progress",
 				label: "In Progress",
-				icon: ArrowUpCircleIcon,
+				icon: "arrow-up-circle-icon",
 			},
 			{
 				value: "done",
 				label: "Done",
-				icon: CheckCircle2Icon,
+				icon: "check-circle-icon",
 			},
 			{
 				value: "canceled",
 				label: "Canceled",
-				icon: XCircleIcon,
+				icon: "x-circle-icon",
 			},
 		];
 
@@ -242,7 +224,7 @@ export const CommandPopover: Story = {
 						<Button variant="outline" size="sm" className="w-[120px] justify-start">
 							{selectedStatus ? (
 								<Fragment>
-									<selectedStatus.icon aria-hidden="true" className="mr-2 h-4 w-4 shrink-0" />
+									<Icon icon={selectedStatus.icon} className="mr-2 h-4 w-4 shrink-0" />
 									{selectedStatus.label}
 								</Fragment>
 							) : (
@@ -269,8 +251,8 @@ export const CommandPopover: Story = {
 													setOpen(false);
 												}}
 											>
-												<status.icon
-													aria-hidden="true"
+												<Icon
+													icon={status.icon}
 													className={cn(
 														"mr-2 h-4 w-4",
 														status.value === selectedStatus?.value ? "opacity-100" : "opacity-40",
@@ -335,7 +317,7 @@ export const ComboBox: Story = {
 									return framework.value === value;
 							  })?.label
 							: "Select framework..."}
-						<ChevronsUpDownIcon aria-hidden="true" className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+						<Icon icon="chevrons-up-down-icon" className="ml-2 h-4 w-4 shrink-0 opacity-50" />
 					</Button>
 				</PopoverTrigger>
 				<PopoverContent className="w-[200px] p-0">
@@ -352,8 +334,8 @@ export const ComboBox: Story = {
 											setOpen(false);
 										}}
 									>
-										<CheckIcon
-											aria-hidden="true"
+										<Icon
+											icon="check-icon"
 											className={cn(
 												"mr-2 h-4 w-4",
 												value === framework.value ? "opacity-100" : "opacity-0",

@@ -1,10 +1,10 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Settings2Icon as SettingsIcon } from "lucide-react";
 
 import { Button } from "@/button.js";
 import { Input } from "@/input.js";
 import { Label } from "@/label.js";
 import { Popover, PopoverContent, PopoverTrigger } from "@/popover.js";
+import { Icon } from "@/storybook/icons.js";
 
 const meta = {
 	title: "Components/Popover",
@@ -22,7 +22,7 @@ export const Default: Story = {
 			<Popover {...args}>
 				<PopoverTrigger asChild>
 					<Button variant="outline" className="w-10 rounded-full p-0">
-						<SettingsIcon aria-hidden="true" className="h-4 w-4" />
+						<Icon icon="settings-icon" className="h-4 w-4" />
 						<span className="sr-only">Open popover</span>
 					</Button>
 				</PopoverTrigger>

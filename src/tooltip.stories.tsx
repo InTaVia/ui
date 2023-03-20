@@ -1,7 +1,7 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { PlusIcon } from "lucide-react";
 
 import { Button } from "@/button.js";
+import { Icon } from "@/storybook/icons.js";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/tooltip.js";
 
 const meta = {
@@ -26,7 +26,7 @@ export const Default: Story = {
 			<Tooltip {...args}>
 				<TooltipTrigger asChild>
 					<Button variant="outline" className="w-10 rounded-full p-0">
-						<PlusIcon aria-hidden="true" className="h-4 w-4" />
+						<Icon icon="plus-icon" className="h-4 w-4" />
 						<span className="sr-only">Add</span>
 					</Button>
 				</TooltipTrigger>

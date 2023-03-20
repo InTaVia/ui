@@ -1,6 +1,8 @@
-import type { ReactNode } from "react";
+import { type ReactNode, Fragment } from "react";
 
-const symbols = {
+import { Icon } from "@/icon.js";
+
+export const symbols = {
 	"chevron-down-icon": (
 		<symbol
 			id="chevron-down-icon"
@@ -95,12 +97,24 @@ const symbols = {
 	),
 } satisfies Record<string, ReactNode>;
 
-export type IconId = keyof typeof symbols;
+interface IconsProps {
+	symbols: Record<string, JSX.Element>;
+}
 
-export function Icons(): JSX.Element {
+export function Icons(props: IconsProps): JSX.Element {
+	const { symbols } = props;
+
 	return (
 		<svg style={{ display: "none" }}>
-			<defs>{Object.values(symbols)}</defs>
+			<defs>
+				{Object.entries(symbols).map(([key, symbol]) => {
+					return <Fragment key={key}>{symbol}</Fragment>;
+				})}
+			</defs>
 		</svg>
 	);
 }
+
+const _ICon = Icon<keyof typeof symbols>;
+
+export { _ICon as Icon };

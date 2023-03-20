@@ -5,7 +5,7 @@ import "~/config/storybook/preview.css";
 import { type Decorator, type Parameters as StorybookParameters } from "@storybook/react";
 import { type GlobalTypes } from "@storybook/types";
 
-import { Main } from "@/decorators/main.decorator.js";
+import { Main } from "@/storybook/main.decorator.js";
 
 export const decorators: Array<Decorator> = [Main];
 

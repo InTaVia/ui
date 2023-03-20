@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { ItalicIcon } from "lucide-react";
 
+import { Icon } from "@/storybook/icons.js";
 import { Toggle } from "@/toggle.js";
 
 const meta = {
@@ -19,7 +19,7 @@ export const Default: Story = {
 	render(args) {
 		return (
 			<Toggle {...args}>
-				<ItalicIcon aria-hidden="true" className="h-4 w-4" />
+				<Icon icon="italic-icon" className="h-4 w-4" />
 			</Toggle>
 		);
 	},

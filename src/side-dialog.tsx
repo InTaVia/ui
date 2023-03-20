@@ -1,8 +1,8 @@
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { type VariantProps, cva } from "class-variance-authority";
-import { XIcon } from "lucide-react";
 import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
+import { Icon } from "@/icons.js";
 import { cn } from "@/lib/cn.js";
 
 const portalVariants = cva("fixed inset-0 z-50 flex", {
@@ -180,7 +180,7 @@ export const SideDialogContent = forwardRef<SideDialogContentElement, SideDialog
 				>
 					{children}
 					<DialogPrimitive.Close className="absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-neutral-100 dark:focus:ring-neutral-400 dark:focus:ring-offset-neutral-900 dark:data-[state=open]:bg-neutral-800">
-						<XIcon aria-hidden="true" className="h-4 w-4" />
+						<Icon icon="x-icon" className="h-4 w-4" />
 						<span className="sr-only">Close</span>
 					</DialogPrimitive.Close>
 				</DialogPrimitive.Content>

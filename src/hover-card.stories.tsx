@@ -1,9 +1,9 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { CalendarDaysIcon } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/avatar.js";
 import { Button } from "@/button.js";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/hover-card.js";
+import { Icon } from "@/storybook/icons.js";
 
 const meta = {
 	title: "Components/HoverCard",
@@ -32,7 +32,7 @@ export const Default: Story = {
 							<h4 className="text-sm font-semibold">@nextjs</h4>
 							<p className="text-sm">The React Framework – created and maintained by @vercel.</p>
 							<div className="flex items-center pt-2">
-								<CalendarDaysIcon aria-hidden="true" className="mr-2 h-4 w-4 opacity-70" />{" "}
+								<Icon icon="calendar-days-icon" className="mr-2 h-4 w-4 opacity-70" />{" "}
 								<span className="text-xs text-neutral-500 dark:text-neutral-400">
 									Joined December 2021
 								</span>

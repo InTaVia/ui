@@ -9,7 +9,6 @@ import {
 import * as PopperPrimitive from "@radix-ui/react-popper";
 import { createPopperScope } from "@radix-ui/react-popper";
 import * as Separator from "@radix-ui/react-separator";
-import { CheckIcon, ChevronDownIcon } from "lucide-react";
 import {
 	type ComponentPropsWithoutRef,
 	type ElementRef,
@@ -19,6 +18,7 @@ import {
 	Fragment,
 } from "react";
 
+import { Icon } from "@/icons.js";
 import { cn } from "@/lib/cn.js";
 
 const usePopperScope = createPopperScope();
@@ -128,7 +128,7 @@ export const ComboBoxButton = forwardRef<ComboBoxButtonElement, ComboBoxButtonPr
 				className={cn("absolute inset-y-0 right-0 pr-2", className)}
 				{...rest}
 			>
-				<ChevronDownIcon aria-hidden="true" className="h-4 w-4 opacity-50" />
+				<Icon icon="chevron-down-icon" className="h-4 w-4 opacity-50" />
 			</Combobox.Button>
 		);
 	},
@@ -218,7 +218,7 @@ export const ComboBoxItem = forwardRef<ComboBoxItemElement, ComboBoxItemProps>(
 						<Fragment>
 							{selected ? (
 								<span className="absolute left-2 h-3.5 w-3.5 items-center justify-center">
-									<CheckIcon aria-hidden="true" className="h-4 w-4" />
+									<Icon icon="check-icon" className="h-4 w-4" />
 								</span>
 							) : null}
 

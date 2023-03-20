@@ -1,7 +1,7 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Trash2Icon } from "lucide-react";
 
 import { IconButton } from "@/icon-button.js";
+import { Icon } from "@/storybook/icons.js";
 
 const meta = {
 	title: "Components/IconButton",
@@ -19,7 +19,7 @@ export const Default: Story = {
 	render(args) {
 		return (
 			<IconButton {...args}>
-				<Trash2Icon aria-hidden="true" className="h-5 w-5 shrink-0" />
+				<Icon icon="trash-icon" className="h-5 w-5 shrink-0" />
 			</IconButton>
 		);
 	},

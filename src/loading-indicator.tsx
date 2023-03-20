@@ -1,7 +1,7 @@
 import { type VariantProps, cva } from "class-variance-authority";
-import { type LucideProps, Loader2Icon } from "lucide-react";
-import { type ElementRef, type ReactNode, forwardRef } from "react";
+import { type ElementRef, type ReactNode, type SVGProps, forwardRef } from "react";
 
+import { Icon } from "@/icons.js";
 import { cn } from "@/lib/cn.js";
 
 const loaderVariants = cva("shrink-0 animate-spin", {
@@ -17,25 +17,20 @@ const loaderVariants = cva("shrink-0 animate-spin", {
 	} as const,
 });
 
-type LoadingIndicatorProps = LucideProps &
+type LoadingIndicatorProps = SVGProps<SVGSVGElement> &
 	VariantProps<typeof loaderVariants> & {
 		/** @default 'Loading...'' */
 		label?: ReactNode;
 	};
-type LoadingIndicatorElement = ElementRef<"svg">;
+type LoadingIndicatorElement = ElementRef<"div">;
 
 export const LoadingIndicator = forwardRef<LoadingIndicatorElement, LoadingIndicatorProps>(
 	function LoadingIndicator(props, forwardedRef): JSX.Element {
 		const { className, label = "Loading...", size, ...rest } = props;
 
 		return (
-			<div aria-valuemin={0} aria-valuemax={100} role="progressbar">
-				<Loader2Icon
-					ref={forwardedRef}
-					aria-hidden="true"
-					className={cn(loaderVariants({ className, size }))}
-					{...rest}
-				/>
+			<div ref={forwardedRef} aria-valuemin={0} aria-valuemax={100} role="progressbar">
+				<Icon icon="spinner-icon" className={cn(loaderVariants({ className, size }))} {...rest} />
 				<span className="sr-only">{label}</span>
 			</div>
 		);

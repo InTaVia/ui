@@ -1,7 +1,7 @@
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
-import { ChevronDownIcon } from "lucide-react";
 import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
+import { Icon } from "@/icons.js";
 import { cn } from "@/lib/cn.js";
 
 export const NavigationMenuItem = NavigationMenuPrimitive.Item;
@@ -76,8 +76,8 @@ export const NavigationMenuTrigger = forwardRef<
 			{...rest}
 		>
 			{children}{" "}
-			<ChevronDownIcon
-				aria-hidden="true"
+			<Icon
+				icon="chevron-down-icon"
 				className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
 			/>
 		</NavigationMenuPrimitive.Trigger>

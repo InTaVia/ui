@@ -1,7 +1,7 @@
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
-import { CircleIcon } from "lucide-react";
 import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
+import { Icon } from "@/icons.js";
 import { cn } from "@/lib/cn.js";
 
 type RadioGroupProps = ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>;
@@ -43,10 +43,7 @@ export const RadioGroupItem = forwardRef<RadioGroupItemElement, RadioGroupItemPr
 				{...rest}
 			>
 				<RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-					<CircleIcon
-						aria-hidden="true"
-						className="h-2.5 w-2.5 fill-neutral-900 dark:fill-neutral-50"
-					/>
+					<Icon icon="circle-icon" className="h-2.5 w-2.5 fill-neutral-900 dark:fill-neutral-50" />
 				</RadioGroupPrimitive.Indicator>
 			</RadioGroupPrimitive.Item>
 		);

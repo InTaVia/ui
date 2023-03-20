@@ -1,9 +1,9 @@
 import { type DialogProps } from "@radix-ui/react-dialog";
 import { Command as CommandPrimitive, useCommandState } from "cmdk";
-import { SearchIcon } from "lucide-react";
 import { type ComponentPropsWithoutRef, type ElementRef, forwardRef } from "react";
 
 import { Dialog, DialogContent } from "@/dialog.js";
+import { Icon } from "@/icons.js";
 import { cn } from "@/lib/cn.js";
 
 type CommandProps = ComponentPropsWithoutRef<typeof CommandPrimitive>;
@@ -62,7 +62,7 @@ export const CommandInput = forwardRef<CommandInputElement, CommandInputProps>(
 				// eslint-disable-next-line react/no-unknown-property
 				cmdk-input-wrapper=""
 			>
-				<SearchIcon aria-hidden="true" className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+				<Icon icon="search-icon" className="mr-2 h-4 w-4 shrink-0 opacity-50" />
 				<CommandPrimitive.Input
 					ref={forwardedRef}
 					className={cn(

@@ -10,12 +10,12 @@ export const buttonVariants = cva(
 		variants: {
 			variant: {
 				default:
-					"bg-neutral-700 text-white hover:bg-neutral-800 dark:bg-neutral-50 dark:text-neutral-900",
+					"bg-neutral-500 text-white hover:bg-neutral-700 dark:bg-neutral-700 dark:text-neutral-100",
 				destructive: "bg-red-500 text-white hover:bg-red-600 dark:hover:bg-red-600",
 				outline:
-					"border border-neutral-500 bg-transparent hover:bg-neutral-500 hover:text-white dark:border-neutral-700 dark:text-neutral-100",
+					"border border-neutral-200 bg-transparent hover:bg-neutral-200 dark:border-neutral-700 dark:text-neutral-100",
 				subtle:
-					"bg-neutral-500 text-white hover:bg-neutral-700 dark:bg-neutral-700 dark:text-neutral-100",
+					"bg-neutral-200 text-neutral-900 hover:bg-neutral-300 dark:bg-neutral-700 dark:text-neutral-100",
 				ghost:
 					"bg-transparent hover:bg-neutral-100 data-[state=open]:bg-transparent dark:text-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-100 dark:data-[state=open]:bg-transparent",
 				link: "bg-transparent text-neutral-900 underline-offset-4 hover:bg-transparent hover:underline dark:bg-transparent dark:text-neutral-100 dark:hover:bg-transparent",

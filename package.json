@@ -11,7 +11,7 @@
 		"node": "18.x",
 		"pnpm": "7.x"
 	},
-	"packageManager": "pnpm@7.27.1",
+	"packageManager": "pnpm@8.6.6",
 	"sideEffects": false,
 	"scripts": {
 		"build": "tsup ./src/index.tsx && cp ./src/tailwind-preset/* ./dist/",
@@ -114,7 +114,7 @@
 		"storybook": "^7.0.0-rc.1",
 		"stylelint": "^15.2.0",
 		"tsup": "^6.6.3",
-		"typescript": "^4.9.5",
+		"typescript": "^5.1.6",
 		"vite": "^4.1.4",
 		"vite-tsconfig-paths": "^4.0.5"
 	},

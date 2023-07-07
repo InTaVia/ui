@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.2.1
+
+### Patch Changes
+
+- [`b79a3cd`](https://github.com/InTaVia/ui/commit/b79a3cddbb6649465935eb4b9915088e44851be5) Thanks
+  [@samuelbeck](https://github.com/samuelbeck)! - Adapt colors of buttons
+
 ## 0.2.0
 
 ### Minor Changes

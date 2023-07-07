@@ -1,5 +1,12 @@
 # @intavia/ui
 
+## 0.2.0
+
+### Minor Changes
+
+- [`a136d72`](https://github.com/InTaVia/ui/commit/a136d720e92ff4b6c59108f4ae28fbc376830833) Thanks
+  [@samuelbeck](https://github.com/samuelbeck)! - Change button styles
+
 ## 0.1.25
 
 ### Patch Changes
